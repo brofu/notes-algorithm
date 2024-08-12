@@ -87,7 +87,7 @@ Usually there **2 templates** for `sub sequences problems`,
 >
 > 在这个思路中 dp 数组的定义是：
 >
-> 在子数组 arr[0..i] 中，以 arr[i] 结尾的子序列的(最值)长度是 dp[i]。==> Why not define it as `the LIS of arr[0...i]? Refer to 1.
+> **在子数组arr[0..i]中，以arr[i]结尾的子序列的(最值)长度是dp[i]** ==> Why not define it as `the LIS of arr[0...i]? Refer to 1.
 >
 > For example, `300. Longest Increasing Subsequence` and `53. Maximum Subarray`
 >
@@ -112,7 +112,7 @@ Usually there **2 templates** for `sub sequences problems`,
 > ```
 > 涉及两个字符串/数组的场景，dp 数组的定义如下：
 >
-> 在 子数组 arr1[0..i] 和子数组 arr2[0..j] 中，我们要求的子序列长度为 dp[i][j]
+> **在子数组arr1[0..i]和子数组arr2[0..j]中，我们要求的子序列长度为dp[i][j]**
 >
 > For example, `1143. Longest Common Subsequence` and `72. Edit Distance`
 >
@@ -129,10 +129,11 @@ Usually there **2 templates** for `sub sequences problems`,
 | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) | * DP<br>* Sliding Window<br>* Prefix Sum | * How to define the dp table <br>* Compress space complexity | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc53.go) | | 
 | [72. Edit Distance](https://leetcode.com/problems/edit-distance/description/) | * DP table 2-D DP table <br> * DP function | * How to define dp function<br>* How to define DP table <br>* how to compress space with O(N)| [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc72.go) | | 
 | [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/) | * DP table 2-D DP table <br> * DP function | * How to define dp function<br>* How to define DP table <br>* how to compress space with O(N)* DP 2-D DP table| [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc1143.go) | Almost same as problem 72.| 
+| [583. Delete Operation for Two Strings](https://leetcode.com/problems/delete-operation-for-two-strings/description/) | * DP table 2-D DP table <br> * DP function | * The problem is actually to calculate the LCS of two strings. | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc583.go) | Almost same as problem 1143.| 
 
 
 **Reference**
-* https://labuladong.online/algo/dynamic-programming/maximum-subarray/
+1. https://labuladong.online/algo/dynamic-programming/maximum-subarray/
 
 
 ### Problems - Knapsack Problems
