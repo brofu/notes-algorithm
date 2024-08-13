@@ -139,3 +139,114 @@ Usually there **2 templates** for `sub sequences problems`,
 
 
 ### Problems - Knapsack Problems
+
+**Thinking Patterns**
+
+How connect `Knapsack Problems` with `Dynamic Programming` framework?
+
+a. `Status` and `Choice`
+
+> 先说状态，如何才能描述一个问题局面？只要给几个物品和一个背包的容量限制，就形成了一个背包问题呀。所以状态有两个，就是「背包的容量」和「可选择的物品」。
+>
+> 再说选择，也很容易想到啊，对于每件物品，你能选择什么？选择就是「装进背包」或者「不装进背包」。
+>
+> 明白了状态和选择，动态规划问题基本上就解决了，对于自底向上的思考方式，代码的一般框架是这样：
+> 
+> ```
+> for 状态1 in 状态1的所有取值：
+>   for 状态2 in 状态2的所有取值：
+>      for ...
+>            dp[状态1][状态2][...] = 择优(选择1，选择2...)
+> ```
+
+b. Definition of `DP table`
+
+> 首先看看刚才找到的「状态」，有两个，也就是说我们需要一个二维dp数组。
+>
+> dp[i][w]的定义如下：对于前i个物品，当前背包的容量为w，这种情况下可以装的最大价值是dp[i][w]。
+>
+> 比如说，如果dp[3][5] = 6，其含义为：对于给定的一系列物品中，若只对前3个物品进行选择，当背包容量为5时，最多可以装下的价值为6。
+>
+> 根据这个定义，我们想求的最终答案就是 dp[N][W]。base case 就是 dp[0][..] = dp[..][0] = 0，因为没有物品或者背包没有空间的时候，能装的最大价值就是0。
+>
+> ```
+> int[][] dp[N+1][W+1]
+> dp[0][..] = 0
+> dp[..][0] = 0
+>
+> for i in [1..N]:
+    for w in [1..W]:
+>         dp[i][w] = max(
+            把物品 i 装进背包,
+>           不把物品 i 装进背包
+        )
+> return dp[N][W]
+> ```
+
+c. How does the `status` change based on the `choice`?
+
+> 如果没有把这第 i 个物品装入背包，那么很显然，最大价值 dp[i][w] 应该等于 dp[i-1][w]，继承之前的结果。
+
+> 如果把这第 i 个物品装入了背包，那么 dp[i][w] 应该等于 val[i-1] + dp[i-1][w - wt[i-1]]。
+>
+> 首先，由于数组索引从0开始，而我们定义中的i是从1开始计数的，所以val[i-1]和wt[i-1]表示第i个物品的价值和重量。
+> 
+> 如果选择将第i个物品装进背包，那么第i个物品的价值val[i-1] 肯定就到手了，接下来你就要在剩余容量w-wt[i-1]的限制下，在前i-1个物品中挑选，求最大价值，即dp[i-1][w - wt[i-1]]。
+>
+> code about the `status` change
+> ```
+> for i in [1..N]:
+>   for w in [1..W]:
+>        dp[i][w] = max(
+>           dp[i-1][w],
+>           dp[i-1][w - wt[i-1]] + val[i-1]
+>       )
+> return dp[N][W]
+> ```
+
+d. Finally, we got the code framework for `0-1 Knapsack Problem`
+
+```
+func knapsack(wt, val []int) int {
+    // base case 已初始化
+    dp := make([][]int, len(wt)+1)
+    for i := range dp {
+        dp[i] = make([]int, len(wt)+1)
+    }
+    for i := 1; i <= len(wt)+1; i++ {
+        for w := 1; w <= len(wt)+1; w++ {
+            if w-wt[i-1] < 0 { // bag space NOT enough
+                dp[i][w] = dp[i-1][w]
+            } else { // choice to or NOT to put wt[i-1] into bag
+                dp[i][w] = max(
+                    dp[i-1][w-wt[i-1]]+val[i-1],
+                    dp[i-1][w],
+                )
+            }
+        }
+    }
+    return dp[N][W]
+}
+
+func max(a, b int) int {
+    if a > b {
+        return a
+    }
+    return b
+}
+```
+
+
+| Problems | Possible Solutions | Key Points | Code | Comments |
+| :- | :- | :- |:- | :- | 
+| [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) | 1. 2-D DP table <br> 2. 1-D DP table | * How to connect the problem with `Knapsack Problem`? | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc416.go) | - | 
+
+
+**References**
+1. [0-1 Knapsack Problem.](https://labuladong.online/algo/dynamic-programming/knapsack1/)
+2. [Subset Knapsack Problem](https://labuladong.online/algo/dynamic-programming/knapsack2/)
+
+
+
+
+
