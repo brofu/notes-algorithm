@@ -1,8 +1,6 @@
-# Array & String
+# Array 
 
-## Key Points * Skills
-
-
+## Key Points 
 
 ## An Example
 
