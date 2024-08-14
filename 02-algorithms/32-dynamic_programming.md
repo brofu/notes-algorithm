@@ -240,11 +240,16 @@ func max(a, b int) int {
 | Problems | Possible Solutions | Key Points | Code | Comments |
 | :- | :- | :- |:- | :- | 
 | [416. Partition Equal Subset Sum](https://leetcode.com/problems/partition-equal-subset-sum/description/) | 1. 2-D DP table <br> 2. 1-D DP table | * How to connect the problem with `Knapsack Problem`? | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc416.go) | - | 
+| [518. Coin Change II](https://leetcode.com/problems/coin-change-ii/description/) | 1. 2-D DP table <br> 2. 1-D DP table | * The difference from `change coin I` | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc518.go) | - | 
+| [494. Target Sum](https://leetcode.com/problems/target-sum/description/) | 1. 2-D DP <br> 2. 1-D DP table <br> 3. Backtrack | * The base case. dp[1...N][0] not equal to 0| [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc494.go) | - | 
+
 
 
 **References**
 1. [0-1 Knapsack Problem.](https://labuladong.online/algo/dynamic-programming/knapsack1/)
 2. [Subset Knapsack Problem](https://labuladong.online/algo/dynamic-programming/knapsack2/)
+3. [Complete Knapsack Problem](https://labuladong.online/algo/dynamic-programming/knapsack3/)
+4. https://labuladong.online/algo/dynamic-programming/target-sum/
 
 
 
