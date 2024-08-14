@@ -122,6 +122,9 @@ Usually there **2 templates** for `sub sequences problems`,
 > 
 > For example, `516. Longest Palindromic Subsequence`
 
+
+**Problems**
+
 | Problems | Possible Solutions | Key Points | Code | Comments |
 | :- | :- | :- |:- | :- | 
 | [673. Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/) | 1. DP <br> 2. BIT | 1. DP <br> * How to setup/update dp array for `dpCount`? | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc2263.go) | | 
