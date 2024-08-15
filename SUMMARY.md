@@ -5,6 +5,7 @@
   * [String](01-data_structures/050-string.md)
   * [List](01-data_structures/100-list.md)
   * [Tree](01-data_structures/200-tree.md)
+  * [Heap](01-data_structures/400-heap.md)
 - [Algorithms](02-algorithms/readme.md)
   * [Backtrack](02-algorithms/28-backtrack.md)
   * [Dynamic Programming](02-algorithms/32-dynamic_programming.md)
