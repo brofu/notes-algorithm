@@ -11,3 +11,4 @@
   * [Backtrack](02-algorithms/28-backtrack.md)
   * [Dynamic Programming](02-algorithms/32-dynamic_programming.md)
   * [Parenthese Problems](02-algorithms/101-parenthese_problems.md)
+  * [Math Problems](02-algorithms/200-math_problems.md)
