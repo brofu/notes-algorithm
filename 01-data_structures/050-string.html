@@ -1,0 +1,639 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>String · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="100-list.html" />
+    
+    
+    <link rel="prev" href="000-array.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="000-array.html">
+            
+                <a href="000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="050-string.html">
+            
+                <a href="050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="100-list.html">
+            
+                <a href="100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="200-tree.html">
+            
+                <a href="200-tree.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="400-heap.html">
+            
+                <a href="400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../02-algorithms/readme.html">
+            
+                <a href="../02-algorithms/readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../02-algorithms/00-sorting.html">
+            
+                <a href="../02-algorithms/00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../02-algorithms/28-backtrack.html">
+            
+                <a href="../02-algorithms/28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../02-algorithms/32-dynamic_programming.html">
+            
+                <a href="../02-algorithms/32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../02-algorithms/101-parenthese_problems.html">
+            
+                <a href="../02-algorithms/101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../02-algorithms/200-math_problems.html">
+            
+                <a href="../02-algorithms/200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >String</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="string">String</h1>
+<h2 id="key-points">Key Points</h2>
+<h2 id="an-example">An Example</h2>
+<h2 id="problems">Problems</h2>
+<ul>
+<li>Double Pointers<ul>
+<li>Slow and Faster</li>
+<li>Left and Right</li>
+<li>Binary Search</li>
+<li>Sliding Window</li>
+<li>Palindromic Problem</li>
+</ul>
+</li>
+</ul>
+<h3 id="problems---double-pointers">Problems - Double Pointers</h3>
+<p><strong>Key Principle</strong></p>
+<blockquote>
+<p>&#x5728;&#x5904;&#x7406;&#x6570;&#x7EC4;&#x548C;&#x94FE;&#x8868;&#x76F8;&#x5173;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x53CC;&#x6307;&#x9488;&#x6280;&#x5DE7;&#x662F;&#x7ECF;&#x5E38;&#x7528;&#x5230;&#x7684;&#xFF0C;&#x53CC;&#x6307;&#x9488;&#x6280;&#x5DE7;&#x4E3B;&#x8981;&#x5206;&#x4E3A;&#x4E24;&#x7C7B;&#xFF1A;&#x5DE6;&#x53F3;&#x6307;&#x9488;&#x548C;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x3002;</p>
+<p>&#x6240;&#x8C13;&#x5DE6;&#x53F3;&#x6307;&#x9488;&#xFF0C;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x76F8;&#x5411;&#x800C;&#x884C;&#x6216;&#x8005;&#x76F8;&#x80CC;&#x800C;&#x884C;&#xFF1B;</p>
+<p>&#x800C;&#x6240;&#x8C13;&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF0C;&#x5C31;&#x662F;&#x4E24;&#x4E2A;&#x6307;&#x9488;&#x540C;&#x5411;&#x800C;&#x884C;&#xFF0C;&#x4E00;&#x5FEB;&#x4E00;&#x6162;&#x3002;(&#x6ED1;&#x52A8;&#x7A97;&#x53E3;&#x662F;&#x5FEB;&#x6162;&#x6307;&#x9488;&#x7684;&#x4E00;&#x4E2A;&#x7C7B;&#x578B;)</p>
+<p>&#x5BF9;&#x4E8E;&#x5355;&#x94FE;&#x8868;&#x6765;&#x8BF4;&#xFF0C;&#x5927;&#x90E8;&#x5206;&#x6280;&#x5DE7;&#x90FD;&#x5C5E;&#x4E8E;&#x5FEB;&#x6162;&#x6307;&#x9488;&#xFF0C;&#x5355;&#x94FE;&#x8868;&#x7684;&#x516D;&#x5927;&#x89E3;&#x9898;&#x5957;&#x8DEF; &#x90FD;&#x6DB5;&#x76D6;&#x4E86;&#xFF0C;&#x6BD4;&#x5982;&#x94FE;&#x8868;&#x73AF;&#x5224;&#x65AD;&#xFF0C;&#x5012;&#x6570;&#x7B2C; K &#x4E2A;&#x94FE;&#x8868;&#x8282;&#x70B9;&#x7B49;&#x95EE;&#x9898;&#xFF0C;&#x5B83;&#x4EEC;&#x90FD;&#x662F;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; fast &#x5FEB;&#x6307;&#x9488;&#x548C;&#x4E00;&#x4E2A; slow &#x6162;&#x6307;&#x9488;&#x914D;&#x5408;&#x5B8C;&#x6210;&#x4EFB;&#x52A1;&#x3002;</p>
+<p>&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x5E76;&#x6CA1;&#x6709;&#x771F;&#x6B63;&#x610F;&#x4E49;&#x4E0A;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x4F46;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x628A;&#x7D22;&#x5F15;&#x5F53;&#x505A;&#x6570;&#x7EC4;&#x4E2D;&#x7684;&#x6307;&#x9488;&#xFF0C;&#x8FD9;&#x6837;&#x4E5F;&#x53EF;&#x4EE5;&#x5728;&#x6570;&#x7EC4;&#x4E2D;&#x65BD;&#x5C55;&#x53CC;&#x6307;&#x9488;&#x6280;&#x5DE7;&#xFF0C;&#x672C;&#x6587;&#x4E3B;&#x8981;&#x8BB2;&#x6570;&#x7EC4;&#x76F8;&#x5173;&#x7684;&#x53CC;&#x6307;&#x9488;&#x7B97;&#x6CD5;&#x3002;</p>
+</blockquote>
+<p><strong>Problems</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-array/description/" target="_blank">26. Remove Duplicates from Sorted Array</a></td>
+<td style="text-align:left">Double Pointers, slow + fast</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc26.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/remove-duplicates-from-sorted-list/description/" target="_blank">83. Remove Duplicates from Sorted List</a></td>
+<td style="text-align:left">Double Pointers, slow + fast</td>
+<td style="text-align:left">Edged case of <code>head == nil</code></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc83.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/remove-element/description/" target="_blank">27. Remove Element</a></td>
+<td style="text-align:left">Double Pointers, slow + fast</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc27.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/move-zeroes/description/" target="_blank">283. Move Zeroes</a></td>
+<td style="text-align:left">Double Pointers, slow + fast</td>
+<td style="text-align:left">* Similar as Problem 27. Just remove the 0, and pad the index from k with 0</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc283.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/two-sum-ii-input-array-is-sorted/description/" target="_blank">167. Two Sum II - Input Array Is Sorted</a></td>
+<td style="text-align:left">Double Pointers, left + right, from both sides to central</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc167.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/reverse-string/description/" target="_blank">344. Reverse String</a></td>
+<td style="text-align:left">Double Pointers, left + right, from both sides to central</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc344.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-palindromic-substring/description/" target="_blank">5. Longest Palindromic Substring</a></td>
+<td style="text-align:left">Double Pointers, left + right, from central to both sides</td>
+<td style="text-align:left">* &#x627E;&#x56DE;&#x6587;&#x4E32;&#x7684;&#x96BE;&#x70B9;&#x5728;&#x4E8E;&#xFF0C;&#x56DE;&#x6587;&#x4E32;&#x7684;&#x7684;&#x957F;&#x5EA6;&#x53EF;&#x80FD;&#x662F;&#x5947;&#x6570;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5076;&#x6570;&#xFF0C;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#x7684;&#x6838;&#x5FC3;&#x662F;&#x4ECE;&#x4E2D;&#x5FC3;&#x5411;&#x4E24;&#x7AEF;&#x6269;&#x6563;&#x7684;&#x53CC;&#x6307;&#x9488;&#x6280;&#x5DE7;</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc5.go" target="_blank">code</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference</strong></p>
+<ol>
+<li><a href="https://labuladong.online/algo/essential-technique/array-two-pointers-summary-2/" target="_blank">https://labuladong.online/algo/essential-technique/array-two-pointers-summary-2/</a></li>
+</ol>
+<h3 id="problems---palindromic-problem">Problems - Palindromic Problem</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/valid-palindrome/description/" target="_blank">125. Valid Palindrome</a></td>
+<td style="text-align:left">Double Pointers</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc125.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/valid-palindrome-ii/description/" target="_blank">680. Valid Palindrome II</a></td>
+<td style="text-align:left">Double Pointers</td>
+<td style="text-align:left">* Recursively</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc680.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-palindromic-substring/description/" target="_blank">5. Longest Palindromic Substring</a></td>
+<td style="text-align:left">Double Pointers, left + right, from central to both sides</td>
+<td style="text-align:left">* &#x627E;&#x56DE;&#x6587;&#x4E32;&#x7684;&#x96BE;&#x70B9;&#x5728;&#x4E8E;&#xFF0C;&#x56DE;&#x6587;&#x4E32;&#x7684;&#x7684;&#x957F;&#x5EA6;&#x53EF;&#x80FD;&#x662F;&#x5947;&#x6570;&#x4E5F;&#x53EF;&#x80FD;&#x662F;&#x5076;&#x6570;&#xFF0C;&#x89E3;&#x51B3;&#x8BE5;&#x95EE;&#x9898;&#x7684;&#x6838;&#x5FC3;&#x662F;&#x4ECE;&#x4E2D;&#x5FC3;&#x5411;&#x4E24;&#x7AEF;&#x6269;&#x6563;&#x7684;&#x53CC;&#x6307;&#x9488;&#x6280;&#x5DE7;</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc5.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/shortest-palindrome/description/" target="_blank">214. Shortest Palindrome</a></td>
+<td style="text-align:left"><em> Double Pointers <br> </em> KMP?</td>
+<td style="text-align:left">Refer to the code for the <code>Double Pointers</code> approach</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc214.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---sliding-window">Problems - Sliding Window</h3>
+<p><strong>Key Principle</strong></p>
+<blockquote>
+<p>1.&#x6211;&#x4EEC;&#x5728;&#x5B57;&#x7B26;&#x4E32; S &#x4E2D;&#x4F7F;&#x7528;&#x53CC;&#x6307;&#x9488;&#x4E2D;&#x7684;&#x5DE6;&#x53F3;&#x6307;&#x9488;&#x6280;&#x5DE7;&#xFF0C;&#x521D;&#x59CB;&#x5316; left = right = 0&#xFF0C;&#x628A;&#x7D22;&#x5F15;&#x5DE6;&#x95ED;&#x53F3;&#x5F00;&#x533A;&#x95F4; [left, right) &#x79F0;&#x4E3A;&#x4E00;&#x4E2A;&#x300C;&#x7A97;&#x53E3;&#x300D;&#x3002;
+2.&#x6211;&#x4EEC;&#x5148;&#x4E0D;&#x65AD;&#x5730;&#x589E;&#x52A0; right &#x6307;&#x9488;&#x6269;&#x5927;&#x7A97;&#x53E3; [left, right)&#xFF0C;&#x76F4;&#x5230;&#x7A97;&#x53E3;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF08;&#x5305;&#x542B;&#x4E86; T &#x4E2D;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#xFF09;&#x3002;
+3.&#x6B64;&#x65F6;&#xFF0C;&#x6211;&#x4EEC;&#x505C;&#x6B62;&#x589E;&#x52A0; right&#xFF0C;&#x8F6C;&#x800C;&#x4E0D;&#x65AD;&#x589E;&#x52A0; left &#x6307;&#x9488;&#x7F29;&#x5C0F;&#x7A97;&#x53E3; [left, right)&#xFF0C;&#x76F4;&#x5230;&#x7A97;&#x53E3;&#x4E2D;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x4E0D;&#x518D;&#x7B26;&#x5408;&#x8981;&#x6C42;&#xFF08;&#x4E0D;&#x5305;&#x542B; T &#x4E2D;&#x7684;&#x6240;&#x6709;&#x5B57;&#x7B26;&#x4E86;&#xFF09;&#x3002;&#x540C;&#x65F6;&#xFF0C;&#x6BCF;&#x6B21;&#x589E;&#x52A0; left&#xFF0C;&#x6211;&#x4EEC;&#x90FD;&#x8981;&#x66F4;&#x65B0;&#x4E00;&#x8F6E;&#x7ED3;&#x679C;&#x3002;
+4.&#x91CD;&#x590D;&#x7B2C; 2 &#x548C;&#x7B2C; 3 &#x6B65;&#xFF0C;&#x76F4;&#x5230; right &#x5230;&#x8FBE;&#x5B57;&#x7B26;&#x4E32; S &#x7684;&#x5C3D;&#x5934;&#x3002;
+&#x7B2C; 2 &#x6B65;&#x76F8;&#x5F53;&#x4E8E;&#x5728;&#x5BFB;&#x627E;&#x4E00;&#x4E2A;&#x300C;&#x53EF;&#x884C;&#x89E3;&#x300D;&#xFF0C;&#x7136;&#x540E;&#x7B2C; 3 &#x6B65;&#x5728;&#x4F18;&#x5316;&#x8FD9;&#x4E2A;&#x300C;&#x53EF;&#x884C;&#x89E3;&#x300D;&#xFF0C;&#x6700;&#x7EC8;&#x627E;&#x5230;&#x6700;&#x4F18;&#x89E3;.</p>
+</blockquote>
+<p>Notes</p>
+<ol>
+<li>The logic of <code>extend window</code> and <code>shrunk window</code> maybe different from problem to problem. For example, it&apos;s different for problem 76 and 159. </li>
+<li>The workflow maybe different from problem to problem also. For example, problem 395. </li>
+</ol>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/minimum-window-substring/description/" target="_blank">76. Minimum Window Substring</a></td>
+<td style="text-align:left">Sliding Window</td>
+<td style="text-align:left">operate the supporting vars at the same time</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc76.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-substring-with-at-most-two-distinct-characters/description/" target="_blank">159. Longest Substring with At Most Two Distinct Characters</a></td>
+<td style="text-align:left">Sliding Window</td>
+<td style="text-align:left">The <code>extend and shrunk window</code> logic is different from problem 76</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc159.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-substring-without-repeating-characters/description/" target="_blank">3. Longest Substring Without Repeating Characters</a></td>
+<td style="text-align:left">Sliding Window</td>
+<td style="text-align:left">Version v2 and PV1. PV1 shows the standard workflow of <code>Sliding Window</code> clearly</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc3.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-substring-with-at-least-k-repeating-characters/description/" target="_blank">395. Longest Substring with At Least K Repeating Characters</a></td>
+<td style="text-align:left">Sliding Window</td>
+<td style="text-align:left">the workflow is different from the framework. Extend, shrunk, and the check if we have a valid result</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc395.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-points-you-can-obtain-from-cards/description/" target="_blank">1423. Maximum Points You Can Obtain from Cards</a></td>
+<td style="text-align:left">Sliding Window</td>
+<td style="text-align:left">* Hard point is to convert the problem to sliding window scenarios.</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc1423.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-repeating-character-replacement/description/" target="_blank">424. Longest Repeating Character Replacement</a></td>
+<td style="text-align:left">Sliding Window</td>
+<td style="text-align:left">*Utilize the index of character in the string</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc424.go" target="_blank">code</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference</strong></p>
+<ol>
+<li><a href="https://labuladong.online/algo/essential-technique/sliding-window-framework-2/" target="_blank">https://labuladong.online/algo/essential-technique/sliding-window-framework-2/</a></li>
+</ol>
+<h3 id="problems---others">Problems - Others</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-repeating-substring/description/" target="_blank">1062. Longest Repeating Substring</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><em> 1.1 The idea of loop logic.<br> </em> 1.2 Stop loop in advance and edged case<br>* 2 The idea of binary search with possible length</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/array/array_lc1062.go" target="_blank">code</a></td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="000-array.html" class="navigation navigation-prev " aria-label="Previous page: Array">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="100-list.html" class="navigation navigation-next " aria-label="Next page: List">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"String","level":"1.2.2","depth":2,"next":{"title":"List","level":"1.2.3","depth":2,"path":"01-data_structures/100-list.md","ref":"01-data_structures/100-list.md","articles":[]},"previous":{"title":"Array","level":"1.2.1","depth":2,"path":"01-data_structures/000-array.md","ref":"01-data_structures/000-array.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"01-data_structures/050-string.md","mtime":"2024-08-19T08:36:23.419Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-19T08:37:02.254Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

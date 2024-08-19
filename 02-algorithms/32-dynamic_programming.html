@@ -1,0 +1,695 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Dynamic Programming · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="101-parenthese_problems.html" />
+    
+    
+    <link rel="prev" href="28-backtrack.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-data_structures/readme.html">
+            
+                <a href="../01-data_structures/readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-data_structures/000-array.html">
+            
+                <a href="../01-data_structures/000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-data_structures/050-string.html">
+            
+                <a href="../01-data_structures/050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-data_structures/100-list.html">
+            
+                <a href="../01-data_structures/100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-data_structures/200-tree.html">
+            
+                <a href="../01-data_structures/200-tree.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-data_structures/400-heap.html">
+            
+                <a href="../01-data_structures/400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="00-sorting.html">
+            
+                <a href="00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="28-backtrack.html">
+            
+                <a href="28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="32-dynamic_programming.html">
+            
+                <a href="32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="101-parenthese_problems.html">
+            
+                <a href="101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="200-math_problems.html">
+            
+                <a href="200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Dynamic Programming</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dynamic-programming">Dynamic Programming</h1>
+<h2 id="key-points">Key Points</h2>
+<ol>
+<li><p>&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;</p>
+<ul>
+<li>If there is &#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;</li>
+</ul>
+</li>
+<li><p>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B;</p>
+<ul>
+<li>(Recurrence or Recursion) &#x524D;&#x540E;&#x9879;&#x4E4B;&#x524D;&#x5173;&#x8054;+base case&#x7684;&#x63CF;&#x8FF0;</li>
+<li>Examples:<ul>
+<li>Fibonacci Problems: <a href="https://labuladong.github.io/algo/images/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AF%A6%E8%A7%A3%E8%BF%9B%E9%98%B6/fib.png" target="_blank">https://labuladong.github.io/algo/images/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AF%A6%E8%A7%A3%E8%BF%9B%E9%98%B6/fib.png</a></li>
+<li>Coins Change Problem: <a href="https://labuladong.github.io/algo/images/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AF%A6%E8%A7%A3%E8%BF%9B%E9%98%B6/coin.png" target="_blank">https://labuladong.github.io/algo/images/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92%E8%AF%A6%E8%A7%A3%E8%BF%9B%E9%98%B6/coin.png</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Overlapping sub problems. For example, <code>Fibonacci Number</code></p>
+<ul>
+<li>Solution:  Cache the middle result</li>
+<li>Optimization: Space used by Cache</li>
+</ul>
+</li>
+<li><p>Memorization or Tabulation. </p>
+<ul>
+<li>LC300. <code>dp[i]</code>, the length of longest sub sequence ends with <code>nums[i]</code> in <code>nums</code></li>
+</ul>
+</li>
+<li>Formulation of State Transition Equation <ul>
+<li>LC300. <code>dp[i] = max(dp[i], dp[j])+1), where j = [i-1,i-2,&#x2026;,0] &amp;&amp; nums[j] &lt; nums[i]</code></li>
+</ul>
+</li>
+</ol>
+<h2 id="thinking-patterns">Thinking Patterns</h2>
+<blockquote>
+<p>&#x52A8;&#x6001;&#x89C4;&#x5212;&#x4E0D;&#x5C31;&#x662F;&#x4ECE;&#x6700;&#x7B80;&#x5355;&#x7684; base case &#x5F80;&#x540E;&#x63A8;&#x5BFC;&#x5417;&#xFF0C;&#x53EF;&#x4EE5;&#x60F3;&#x8C61;&#x6210;&#x4E00;&#x4E2A;&#x94FE;&#x5F0F;&#x53CD;&#x5E94;&#xFF0C;&#x4EE5;&#x5C0F;&#x535A;&#x5927;&#x3002;&#x4F46;&#x53EA;&#x6709;&#x7B26;&#x5408;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x95EE;&#x9898;&#xFF0C;&#x624D;&#x6709;&#x53D1;&#x751F;&#x8FD9;&#x79CD;&#x94FE;&#x5F0F;&#x53CD;&#x5E94;&#x7684;&#x6027;&#x8D28;&#x3002; &#x627E;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x8BC1;&#x660E;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B;&#x6B63;&#x786E;&#x6027;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x65B9;&#x7A0B;&#x7B26;&#x5408;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x5C31;&#x53EF;&#x4EE5;&#x5199;&#x66B4;&#x529B;&#x89E3;&#x4E86;&#xFF0C;&#x5199;&#x51FA;&#x66B4;&#x529B;&#x89E3;&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x51FA;&#x6709;&#x6CA1;&#x6709;&#x91CD;&#x53E0;&#x5B50;&#x95EE;&#x9898;&#x4E86;&#xFF0C;&#x6709;&#x5219;&#x4F18;&#x5316;&#xFF0C;&#x65E0;&#x5219; OK&#x3002;&#x8FD9;&#x4E5F;&#x662F;&#x5957;&#x8DEF;&#xFF0C;&#x7ECF;&#x5E38;&#x5237;&#x9898;&#x7684;&#x8BFB;&#x8005;&#x5E94;&#x8BE5;&#x80FD;&#x4F53;&#x4F1A;&#x3002;</p>
+</blockquote>
+<h2 id="an-example">An Example</h2>
+<p>Use problem <a href="https://leetcode.com/problems/coin-change/description/" target="_blank">LC322</a> as an example. </p>
+<p><strong>&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;</strong></p>
+<blockquote>
+<p>&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x662F;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x95EE;&#x9898;&#xFF0C;&#x56E0;&#x4E3A;&#x5B83;&#x5177;&#x6709;&#x300C;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x300D;&#x7684;.&#x8981;&#x7B26;&#x5408;&#x300C;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x300D;&#xFF0C;&#x5B50;&#x95EE;&#x9898;&#x95F4;&#x5FC5;&#x987B;&#x4E92;&#x76F8;&#x72EC;&#x7ACB;&#x3002;</p>
+<p>&#x56DE;&#x5230;&#x51D1;&#x96F6;&#x94B1;&#x95EE;&#x9898;&#xFF0C;&#x4E3A;&#x4EC0;&#x4E48;&#x8BF4;&#x5B83;&#x7B26;&#x5408;&#x6700;&#x4F18;&#x5B50;&#x7ED3;&#x6784;&#x5462;&#xFF1F; &#x5047;&#x8BBE;&#x4F60;&#x6709;&#x9762;&#x503C;&#x4E3A; 1, 2, 5 &#x7684;&#x786C;&#x5E01;&#xFF0C;&#x4F60;&#x60F3;&#x6C42; amount = 11 &#x65F6;&#x7684;&#x6700;&#x5C11;&#x786C;&#x5E01;&#x6570;&#xFF08;&#x539F;&#x95EE;&#x9898;&#xFF09;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x77E5;&#x9053;&#x51D1;&#x51FA; amount = 10, 9, 6 &#x7684;&#x6700;&#x5C11;&#x786C;&#x5E01;&#x6570;&#xFF08;&#x5B50;&#x95EE;&#x9898;&#xFF09;&#xFF0C;&#x4F60;&#x53EA;&#x9700;&#x8981;&#x628A;&#x5B50;&#x95EE;&#x9898;&#x7684;&#x7B54;&#x6848;&#x52A0;&#x4E00;&#xFF08;&#x518D;&#x9009;&#x4E00;&#x679A;&#x9762;&#x503C;&#x4E3A; 1, 2, 5 &#x7684;&#x786C;&#x5E01;&#xFF09;&#xFF0C;&#x6C42;&#x4E2A;&#x6700;&#x5C0F;&#x503C;&#xFF0C;&#x5C31;&#x662F;&#x539F;&#x95EE;&#x9898;&#x7684;&#x7B54;&#x6848;&#x3002;&#x56E0;&#x4E3A;&#x786C;&#x5E01;&#x7684;&#x6570;&#x91CF;&#x662F;&#x6CA1;&#x6709;&#x9650;&#x5236;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x5B50;&#x95EE;&#x9898;&#x4E4B;&#x95F4;&#x6CA1;&#x6709;&#x76F8;&#x4E92;&#x5236;&#xFF0C;&#x662F;&#x4E92;&#x76F8;&#x72EC;&#x7ACB;&#x7684;&#x3002;</p>
+</blockquote>
+<p><strong>&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B;</strong></p>
+<blockquote>
+<p>&#x90A3;&#x4E48;&#xFF0C;&#x65E2;&#x7136;&#x77E5;&#x9053;&#x4E86;&#x8FD9;&#x662F;&#x4E2A;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x8981;&#x601D;&#x8003;&#x5982;&#x4F55;&#x5217;&#x51FA;&#x6B63;&#x786E;&#x7684;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x65B9;&#x7A0B;&#xFF1F;</p>
+<p>1&#x3001;&#x786E;&#x5B9A;&#x300C;&#x72B6;&#x6001;&#x300D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x539F;&#x95EE;&#x9898;&#x548C;&#x5B50;&#x95EE;&#x9898;&#x4E2D;&#x4F1A;&#x53D8;&#x5316;&#x7684;&#x53D8;&#x91CF;&#x3002;&#x7531;&#x4E8E;&#x786C;&#x5E01;&#x6570;&#x91CF;&#x65E0;&#x9650;&#xFF0C;&#x786C;&#x5E01;&#x7684;&#x9762;&#x989D;&#x4E5F;&#x662F;&#x9898;&#x76EE;&#x7ED9;&#x5B9A;&#x7684;&#xFF0C;&#x53EA;&#x6709;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x4F1A;&#x4E0D;&#x65AD;&#x5730;&#x5411; base case &#x9760;&#x8FD1;&#xFF0C;&#x6240;&#x4EE5;&#x552F;&#x4E00;&#x7684;&#x300C;&#x72B6;&#x6001;&#x300D;&#x5C31;&#x662F;&#x76EE;&#x6807;&#x91D1;&#x989D; amount&#x3002;</p>
+<p>2&#x3001;&#x786E;&#x5B9A;&#x300C;&#x9009;&#x62E9;&#x300D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x5BFC;&#x81F4;&#x300C;&#x72B6;&#x6001;&#x300D;&#x4EA7;&#x751F;&#x53D8;&#x5316;&#x7684;&#x884C;&#x4E3A;&#x3002;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x4E3A;&#x4EC0;&#x4E48;&#x53D8;&#x5316;&#x5462;&#xFF0C;&#x56E0;&#x4E3A;&#x4F60;&#x5728;&#x9009;&#x62E9;&#x786C;&#x5E01;&#xFF0C;&#x4F60;&#x6BCF;&#x9009;&#x62E9;&#x4E00;&#x679A;&#x786C;&#x5E01;&#xFF0C;&#x5C31;&#x76F8;&#x5F53;&#x4E8E;&#x51CF;&#x5C11;&#x4E86;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x3002;&#x6240;&#x4EE5;&#x8BF4;&#x6240;&#x6709;&#x786C;&#x5E01;&#x7684;&#x9762;&#x503C;&#xFF0C;&#x5C31;&#x662F;&#x4F60;&#x7684;&#x300C;&#x9009;&#x62E9;&#x300D;&#x3002;</p>
+<p>3&#x3001;&#x660E;&#x786E; dp &#x51FD;&#x6570;(Top to Down)/dp&#x6570;&#x7EC4;(Down to Top)&#x7684;&#x5B9A;&#x4E49;&#x3002;</p>
+<p>Top to Down </p>
+<p>&#x6211;&#x4EEC;&#x8FD9;&#x91CC;&#x8BB2;&#x7684;&#x662F;&#x81EA;&#x9876;&#x5411;&#x4E0B;&#x7684;&#x89E3;&#x6CD5;&#xFF0C;&#x6240;&#x4EE5;&#x4F1A;&#x6709;&#x4E00;&#x4E2A;&#x9012;&#x5F52;&#x7684; dp &#x51FD;&#x6570;&#xFF0C;&#x4E00;&#x822C;&#x6765;&#x8BF4;&#x51FD;&#x6570;&#x7684;&#x53C2;&#x6570;&#x5C31;&#x662F;&#x72B6;&#x6001;&#x8F6C;&#x79FB;&#x4E2D;&#x4F1A;&#x53D8;&#x5316;&#x7684;&#x91CF;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x4E0A;&#x9762;&#x8BF4;&#x5230;&#x7684;&#x300C;&#x72B6;&#x6001;&#x300D;&#xFF1B;&#x51FD;&#x6570;&#x7684;&#x8FD4;&#x56DE;&#x503C;&#x5C31;&#x662F;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x7684;&#x91CF;&#x3002;&#x5C31;&#x672C;&#x9898;&#x6765;&#x8BF4;&#xFF0C;&#x72B6;&#x6001;&#x53EA;&#x6709;&#x4E00;&#x4E2A;&#xFF0C;&#x5373;&#x300C;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x300D;&#xFF0C;&#x9898;&#x76EE;&#x8981;&#x6C42;&#x6211;&#x4EEC;&#x8BA1;&#x7B97;&#x51D1;&#x51FA;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x6240;&#x9700;&#x7684;&#x6700;&#x5C11;&#x786C;&#x5E01;&#x6570;&#x91CF;&#x3002;</p>
+<p>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x8FD9;&#x6837;&#x5B9A;&#x4E49; dp &#x51FD;&#x6570;&#xFF1A;dp(n) &#x8868;&#x793A;&#xFF0C;&#x8F93;&#x5165;&#x4E00;&#x4E2A;&#x76EE;&#x6807;&#x91D1;&#x989D; n&#xFF0C;&#x8FD4;&#x56DE;&#x51D1;&#x51FA;&#x76EE;&#x6807;&#x91D1;&#x989D; n &#x6240;&#x9700;&#x7684;&#x6700;&#x5C11;&#x786C;&#x5E01;&#x6570;&#x91CF;&#x3002;</p>
+<p>Down to Top</p>
+<p>&#x5F53;&#x7136;&#xFF0C;&#x6211;&#x4EEC;&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5E95;&#x5411;&#x4E0A;&#x4F7F;&#x7528; dp table &#x6765;&#x6D88;&#x9664;&#x91CD;&#x53E0;&#x5B50;&#x95EE;&#x9898;&#xFF0C;&#x5173;&#x4E8E;&#x300C;&#x72B6;&#x6001;&#x300D;&#x300C;&#x9009;&#x62E9;&#x300D;&#x548C; base case &#x4E0E;&#x4E4B;&#x524D;&#x6CA1;&#x6709;&#x533A;&#x522B;&#xFF0C;dp &#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;&#x548C;&#x521A;&#x624D; dp &#x51FD;&#x6570;&#x7C7B;&#x4F3C;&#xFF0C;&#x4E5F;&#x662F;&#x628A;&#x300C;&#x72B6;&#x6001;&#x300D;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x4F5C;&#x4E3A;&#x53D8;&#x91CF;&#x3002;&#x4E0D;&#x8FC7; dp &#x51FD;&#x6570;&#x4F53;&#x73B0;&#x5728;&#x51FD;&#x6570;&#x53C2;&#x6570;&#xFF0C;&#x800C; dp &#x6570;&#x7EC4;&#x4F53;&#x73B0;&#x5728;&#x6570;&#x7EC4;&#x7D22;&#x5F15;&#xFF1A;</p>
+<p>dp &#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;&#xFF1A;&#x5F53;&#x76EE;&#x6807;&#x91D1;&#x989D;&#x4E3A; i &#x65F6;&#xFF0C;&#x81F3;&#x5C11;&#x9700;&#x8981; dp[i] &#x679A;&#x786C;&#x5E01;&#x51D1;&#x51FA;&#x3002;</p>
+</blockquote>
+<h2 id="problems">Problems</h2>
+<p>There are some types, classic dp problems, such as </p>
+<ul>
+<li>Sub Sequence Problems</li>
+<li>Knapsack Problems</li>
+<li>Greedy Related Problems</li>
+</ul>
+<h3 id="problems---sub-sequences">Problems - Sub Sequences</h3>
+<p><strong>Thinking Patterns</strong></p>
+<p>Usually there <strong>2 templates</strong> for <code>sub sequences problems</code>, </p>
+<blockquote>
+<p>&#x4E00;&#x4E2A;&#x4E00;&#x7EF4;&#x7684; dp &#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>int n = array.length;
+int[] dp = new int[n];
+for (int i = 1; i &lt; n; i++) {
+   for (int j = 0; j &lt; i; j++) {
+       dp[i] = &#x6700;&#x503C;(dp[i], dp[j] + ...)
+   }
+}
+</code></pre><p><code>&#x6700;&#x957F;&#x9012;&#x589E;&#x5B50;&#x5E8F;&#x5217;</code> &#x548C; <code>&#x6700;&#x5927;&#x5B50;&#x6570;&#x7EC4;&#x548C;</code> &#x90FD;&#x662F;&#x8FD9;&#x4E2A;&#x601D;&#x8DEF;&#x3002;</p>
+<p>&#x5728;&#x8FD9;&#x4E2A;&#x601D;&#x8DEF;&#x4E2D; dp &#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;&#x662F;&#xFF1A;</p>
+<p><strong>&#x5728;&#x5B50;&#x6570;&#x7EC4;arr[0..i]&#x4E2D;&#xFF0C;&#x4EE5;arr[i]&#x7ED3;&#x5C3E;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x7684;(&#x6700;&#x503C;)&#x957F;&#x5EA6;&#x662F;dp[i]</strong> ==&gt; Why not define it as `the LIS of arr[0...i]? Refer to 1.</p>
+<p>For example, <code>300. Longest Increasing Subsequence</code> and <code>53. Maximum Subarray</code></p>
+<p>&#x7B2C;&#x4E8C;&#x79CD;&#x601D;&#x8DEF;&#x6A21;&#x677F;&#x662F;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;&#x7684; dp &#x6570;&#x7EC4;&#xFF1A;</p>
+<pre><code>n := len(arr)
+dp := make([][]int, n)
+// &#x521D;&#x59CB;&#x5316; dp &#x6570;&#x7EC4;
+for i := 0; i &lt; n; i++ {
+    dp[i] = make([]int, n)
+    for j := 0; j &lt; n; j++ {
+        if arr[i] == arr[j] {
+            // &#x5F53; arr[i] &#x4E0E; arr[j] &#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x51FA;&#x9009;&#x62E9;&#xFF0C;&#x505A;&#x51FA;&#x9009;&#x62E9;&#x7684;&#x7ED3;&#x679C;&#x662F;...
+            dp[i][j] = dp[i][j] + ...
+        } else {
+            // &#x5F53; arr[i] &#x4E0E; arr[j] &#x4E0D;&#x76F8;&#x7B49;&#x65F6;&#xFF0C;&#x53EF;&#x4EE5;&#x505A;&#x51FA;&#x9009;&#x62E9;&#xFF0C;&#x505A;&#x51FA;&#x9009;&#x62E9;&#x7684;&#x7ED3;&#x679C;&#x662F; ...
+            dp[i][j] = min(...)
+        }
+    }
+}
+</code></pre><p>&#x6D89;&#x53CA;&#x4E24;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;/&#x6570;&#x7EC4;&#x7684;&#x573A;&#x666F;&#xFF0C;dp &#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p><strong>&#x5728;&#x5B50;&#x6570;&#x7EC4;arr1[0..i]&#x548C;&#x5B50;&#x6570;&#x7EC4;arr2[0..j]&#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x6C42;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x957F;&#x5EA6;&#x4E3A;dp[i][j]</strong></p>
+<p>For example, <code>1143. Longest Common Subsequence</code> and <code>72. Edit Distance</code></p>
+<p>&#x53EA;&#x6D89;&#x53CA;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;/&#x6570;&#x7EC4;&#x7684;&#x573A;&#x666F;&#xFF0C;dp &#x6570;&#x7EC4;&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;</p>
+<p>&#x5728; &#x5B50;&#x6570;&#x7EC4; array[i..j] &#x4E2D;&#xFF0C;&#x6211;&#x4EEC;&#x8981;&#x6C42;&#x7684;&#x5B50;&#x5E8F;&#x5217;&#x7684;&#x957F;&#x5EA6;&#x4E3A; dp[i][j]&#x3002;</p>
+<p>For example, <code>516. Longest Palindromic Subsequence</code></p>
+</blockquote>
+<p><strong>Problems</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/" target="_blank">673. Number of Longest Increasing Subsequence</a></td>
+<td style="text-align:left">1. DP <br> 2. BIT</td>
+<td style="text-align:left">1. DP <br> * How to setup/update dp array for <code>dpCount</code>?</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc2263.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-increasing-subsequence/description/" target="_blank">300. Longest Increasing Subsequence</a></td>
+<td style="text-align:left">* DP</td>
+<td style="text-align:left"><em> How to define the dp table <br></em> Compress space complexity</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc300.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-subarray/description/" target="_blank">53. Maximum Subarray</a></td>
+<td style="text-align:left">1. DP <br>2. Sliding Window <br> 3. Prefix Sum</td>
+<td style="text-align:left"><em> How to define the dp table <br></em> Compress space complexity</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc53.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/edit-distance/description/" target="_blank">72. Edit Distance</a></td>
+<td style="text-align:left">1. DP table 2-D DP table <br> 2. DP function</td>
+<td style="text-align:left"><em> How to define dp function<br></em> How to define DP table <br>* how to compress space with O(N)</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc72.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/longest-common-subsequence/description/" target="_blank">1143. Longest Common Subsequence</a></td>
+<td style="text-align:left">1. DP table 2-D DP table <br> 2. DP function</td>
+<td style="text-align:left"><em> How to define dp function<br></em> How to define DP table <br><em> how to compress space with O(N)</em> DP 2-D DP table</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc1143.go" target="_blank">code</a></td>
+<td style="text-align:left">Almost same as problem 72.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/delete-operation-for-two-strings/description/" target="_blank">583. Delete Operation for Two Strings</a></td>
+<td style="text-align:left">1. DP table 2-D DP table <br> 2. DP function</td>
+<td style="text-align:left">* The problem is actually to calculate the LCS of two strings.</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc583.go" target="_blank">code</a></td>
+<td style="text-align:left">Almost same as problem 1143.</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/minimum-ascii-delete-sum-for-two-strings/description/" target="_blank">712. Minimum ASCII Delete Sum for Two Strings</a></td>
+<td style="text-align:left">1. DP function. <br> 2. DP 2-D table. <br> 3. DP 1-D table.</td>
+<td style="text-align:left">* dp[i][j] means min sum of s1[0...i] and s2[0...j]</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc712.go" target="_blank">code</a></td>
+<td style="text-align:left">Use DP table record the sum</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Reference</strong></p>
+<ol>
+<li><a href="https://labuladong.online/algo/dynamic-programming/maximum-subarray/" target="_blank">https://labuladong.online/algo/dynamic-programming/maximum-subarray/</a></li>
+</ol>
+<h3 id="problems---knapsack-problems">Problems - Knapsack Problems</h3>
+<p><strong>Thinking Patterns</strong></p>
+<p>How connect <code>Knapsack Problems</code> with <code>Dynamic Programming</code> framework?</p>
+<p>a. <code>Status</code> and <code>Choice</code></p>
+<blockquote>
+<p>&#x5148;&#x8BF4;&#x72B6;&#x6001;&#xFF0C;&#x5982;&#x4F55;&#x624D;&#x80FD;&#x63CF;&#x8FF0;&#x4E00;&#x4E2A;&#x95EE;&#x9898;&#x5C40;&#x9762;&#xFF1F;&#x53EA;&#x8981;&#x7ED9;&#x51E0;&#x4E2A;&#x7269;&#x54C1;&#x548C;&#x4E00;&#x4E2A;&#x80CC;&#x5305;&#x7684;&#x5BB9;&#x91CF;&#x9650;&#x5236;&#xFF0C;&#x5C31;&#x5F62;&#x6210;&#x4E86;&#x4E00;&#x4E2A;&#x80CC;&#x5305;&#x95EE;&#x9898;&#x5440;&#x3002;&#x6240;&#x4EE5;&#x72B6;&#x6001;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x5C31;&#x662F;&#x300C;&#x80CC;&#x5305;&#x7684;&#x5BB9;&#x91CF;&#x300D;&#x548C;&#x300C;&#x53EF;&#x9009;&#x62E9;&#x7684;&#x7269;&#x54C1;&#x300D;&#x3002;</p>
+<p>&#x518D;&#x8BF4;&#x9009;&#x62E9;&#xFF0C;&#x4E5F;&#x5F88;&#x5BB9;&#x6613;&#x60F3;&#x5230;&#x554A;&#xFF0C;&#x5BF9;&#x4E8E;&#x6BCF;&#x4EF6;&#x7269;&#x54C1;&#xFF0C;&#x4F60;&#x80FD;&#x9009;&#x62E9;&#x4EC0;&#x4E48;&#xFF1F;&#x9009;&#x62E9;&#x5C31;&#x662F;&#x300C;&#x88C5;&#x8FDB;&#x80CC;&#x5305;&#x300D;&#x6216;&#x8005;&#x300C;&#x4E0D;&#x88C5;&#x8FDB;&#x80CC;&#x5305;&#x300D;&#x3002;</p>
+<p>&#x660E;&#x767D;&#x4E86;&#x72B6;&#x6001;&#x548C;&#x9009;&#x62E9;&#xFF0C;&#x52A8;&#x6001;&#x89C4;&#x5212;&#x95EE;&#x9898;&#x57FA;&#x672C;&#x4E0A;&#x5C31;&#x89E3;&#x51B3;&#x4E86;&#xFF0C;&#x5BF9;&#x4E8E;&#x81EA;&#x5E95;&#x5411;&#x4E0A;&#x7684;&#x601D;&#x8003;&#x65B9;&#x5F0F;&#xFF0C;&#x4EE3;&#x7801;&#x7684;&#x4E00;&#x822C;&#x6846;&#x67B6;&#x662F;&#x8FD9;&#x6837;&#xFF1A;</p>
+<pre><code>for &#x72B6;&#x6001;1 in &#x72B6;&#x6001;1&#x7684;&#x6240;&#x6709;&#x53D6;&#x503C;&#xFF1A;
+  for &#x72B6;&#x6001;2 in &#x72B6;&#x6001;2&#x7684;&#x6240;&#x6709;&#x53D6;&#x503C;&#xFF1A;
+     for ...
+           dp[&#x72B6;&#x6001;1][&#x72B6;&#x6001;2][...] = &#x62E9;&#x4F18;(&#x9009;&#x62E9;1&#xFF0C;&#x9009;&#x62E9;2...)
+</code></pre></blockquote>
+<p>b. Definition of <code>DP table</code></p>
+<blockquote>
+<p>&#x9996;&#x5148;&#x770B;&#x770B;&#x521A;&#x624D;&#x627E;&#x5230;&#x7684;&#x300C;&#x72B6;&#x6001;&#x300D;&#xFF0C;&#x6709;&#x4E24;&#x4E2A;&#xFF0C;&#x4E5F;&#x5C31;&#x662F;&#x8BF4;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x4E00;&#x4E2A;&#x4E8C;&#x7EF4;dp&#x6570;&#x7EC4;&#x3002;</p>
+<p>dp[i][w]&#x7684;&#x5B9A;&#x4E49;&#x5982;&#x4E0B;&#xFF1A;&#x5BF9;&#x4E8E;&#x524D;i&#x4E2A;&#x7269;&#x54C1;&#xFF0C;&#x5F53;&#x524D;&#x80CC;&#x5305;&#x7684;&#x5BB9;&#x91CF;&#x4E3A;w&#xFF0C;&#x8FD9;&#x79CD;&#x60C5;&#x51B5;&#x4E0B;&#x53EF;&#x4EE5;&#x88C5;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x662F;dp[i][w]&#x3002;</p>
+<p>&#x6BD4;&#x5982;&#x8BF4;&#xFF0C;&#x5982;&#x679C;dp[3][5] = 6&#xFF0C;&#x5176;&#x542B;&#x4E49;&#x4E3A;&#xFF1A;&#x5BF9;&#x4E8E;&#x7ED9;&#x5B9A;&#x7684;&#x4E00;&#x7CFB;&#x5217;&#x7269;&#x54C1;&#x4E2D;&#xFF0C;&#x82E5;&#x53EA;&#x5BF9;&#x524D;3&#x4E2A;&#x7269;&#x54C1;&#x8FDB;&#x884C;&#x9009;&#x62E9;&#xFF0C;&#x5F53;&#x80CC;&#x5305;&#x5BB9;&#x91CF;&#x4E3A;5&#x65F6;&#xFF0C;&#x6700;&#x591A;&#x53EF;&#x4EE5;&#x88C5;&#x4E0B;&#x7684;&#x4EF7;&#x503C;&#x4E3A;6&#x3002;</p>
+<p>&#x6839;&#x636E;&#x8FD9;&#x4E2A;&#x5B9A;&#x4E49;&#xFF0C;&#x6211;&#x4EEC;&#x60F3;&#x6C42;&#x7684;&#x6700;&#x7EC8;&#x7B54;&#x6848;&#x5C31;&#x662F; dp[N][W]&#x3002;base case &#x5C31;&#x662F; dp[0][..] = dp[..][0] = 0&#xFF0C;&#x56E0;&#x4E3A;&#x6CA1;&#x6709;&#x7269;&#x54C1;&#x6216;&#x8005;&#x80CC;&#x5305;&#x6CA1;&#x6709;&#x7A7A;&#x95F4;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x80FD;&#x88C5;&#x7684;&#x6700;&#x5927;&#x4EF7;&#x503C;&#x5C31;&#x662F;0&#x3002;</p>
+<pre><code>int[][] dp[N+1][W+1]
+dp[0][..] = 0
+dp[..][0] = 0
+
+for i in [1..N]:
+    for w in [1..W]:
+        dp[i][w] = max(
+            &#x628A;&#x7269;&#x54C1; i &#x88C5;&#x8FDB;&#x80CC;&#x5305;,
+          &#x4E0D;&#x628A;&#x7269;&#x54C1; i &#x88C5;&#x8FDB;&#x80CC;&#x5305;
+        )
+return dp[N][W]
+</code></pre></blockquote>
+<p>c. How does the <code>status</code> change based on the <code>choice</code>?</p>
+<blockquote>
+<p>&#x5982;&#x679C;&#x6CA1;&#x6709;&#x628A;&#x8FD9;&#x7B2C; i &#x4E2A;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x80CC;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x5F88;&#x663E;&#x7136;&#xFF0C;&#x6700;&#x5927;&#x4EF7;&#x503C; dp[i][w] &#x5E94;&#x8BE5;&#x7B49;&#x4E8E; dp[i-1][w]&#xFF0C;&#x7EE7;&#x627F;&#x4E4B;&#x524D;&#x7684;&#x7ED3;&#x679C;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x628A;&#x8FD9;&#x7B2C; i &#x4E2A;&#x7269;&#x54C1;&#x88C5;&#x5165;&#x4E86;&#x80CC;&#x5305;&#xFF0C;&#x90A3;&#x4E48; dp[i][w] &#x5E94;&#x8BE5;&#x7B49;&#x4E8E; val[i-1] + dp[i-1][w - wt[i-1]]&#x3002;</p>
+<p>&#x9996;&#x5148;&#xFF0C;&#x7531;&#x4E8E;&#x6570;&#x7EC4;&#x7D22;&#x5F15;&#x4ECE;0&#x5F00;&#x59CB;&#xFF0C;&#x800C;&#x6211;&#x4EEC;&#x5B9A;&#x4E49;&#x4E2D;&#x7684;i&#x662F;&#x4ECE;1&#x5F00;&#x59CB;&#x8BA1;&#x6570;&#x7684;&#xFF0C;&#x6240;&#x4EE5;val[i-1]&#x548C;wt[i-1]&#x8868;&#x793A;&#x7B2C;i&#x4E2A;&#x7269;&#x54C1;&#x7684;&#x4EF7;&#x503C;&#x548C;&#x91CD;&#x91CF;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x9009;&#x62E9;&#x5C06;&#x7B2C;i&#x4E2A;&#x7269;&#x54C1;&#x88C5;&#x8FDB;&#x80CC;&#x5305;&#xFF0C;&#x90A3;&#x4E48;&#x7B2C;i&#x4E2A;&#x7269;&#x54C1;&#x7684;&#x4EF7;&#x503C;val[i-1] &#x80AF;&#x5B9A;&#x5C31;&#x5230;&#x624B;&#x4E86;&#xFF0C;&#x63A5;&#x4E0B;&#x6765;&#x4F60;&#x5C31;&#x8981;&#x5728;&#x5269;&#x4F59;&#x5BB9;&#x91CF;w-wt[i-1]&#x7684;&#x9650;&#x5236;&#x4E0B;&#xFF0C;&#x5728;&#x524D;i-1&#x4E2A;&#x7269;&#x54C1;&#x4E2D;&#x6311;&#x9009;&#xFF0C;&#x6C42;&#x6700;&#x5927;&#x4EF7;&#x503C;&#xFF0C;&#x5373;dp[i-1][w - wt[i-1]]&#x3002;</p>
+<p>code about the <code>status</code> change</p>
+<pre><code>for i in [1..N]:
+  for w in [1..W]:
+       dp[i][w] = max(
+          dp[i-1][w],
+          dp[i-1][w - wt[i-1]] + val[i-1]
+      )
+return dp[N][W]
+</code></pre></blockquote>
+<p>d. Finally, we got the code framework for <code>0-1 Knapsack Problem</code></p>
+<pre><code>func knapsack(wt, val []int) int {
+    // base case &#x5DF2;&#x521D;&#x59CB;&#x5316;
+    dp := make([][]int, len(wt)+1)
+    for i := range dp {
+        dp[i] = make([]int, len(wt)+1)
+    }
+    for i := 1; i &lt;= len(wt)+1; i++ {
+        for w := 1; w &lt;= len(wt)+1; w++ {
+            if w-wt[i-1] &lt; 0 { // bag space NOT enough
+                dp[i][w] = dp[i-1][w]
+            } else { // choice to or NOT to put wt[i-1] into bag
+                dp[i][w] = max(
+                    dp[i-1][w-wt[i-1]]+val[i-1],
+                    dp[i-1][w],
+                )
+            }
+        }
+    }
+    return dp[N][W]
+}
+
+func max(a, b int) int {
+    if a &gt; b {
+        return a
+    }
+    return b
+}
+</code></pre><table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/partition-equal-subset-sum/description/" target="_blank">416. Partition Equal Subset Sum</a></td>
+<td style="text-align:left">1. 2-D DP table <br> 2. 1-D DP table</td>
+<td style="text-align:left">* How to connect the problem with <code>Knapsack Problem</code>?</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc416.go" target="_blank">code</a></td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/coin-change-ii/description/" target="_blank">518. Coin Change II</a></td>
+<td style="text-align:left">1. 2-D DP table <br> 2. 1-D DP table</td>
+<td style="text-align:left">* The difference from <code>change coin I</code></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc518.go" target="_blank">code</a></td>
+<td style="text-align:left">-</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/target-sum/description/" target="_blank">494. Target Sum</a></td>
+<td style="text-align:left">1. 2-D DP <br> 2. 1-D DP table <br> 3. Backtrack</td>
+<td style="text-align:left">* The base case. dp[1...N][0] not equal to 0</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc494.go" target="_blank">code</a></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<ol>
+<li><a href="https://labuladong.online/algo/dynamic-programming/knapsack1/" target="_blank">0-1 Knapsack Problem.</a></li>
+<li><a href="https://labuladong.online/algo/dynamic-programming/knapsack2/" target="_blank">Subset Knapsack Problem</a></li>
+<li><a href="https://labuladong.online/algo/dynamic-programming/knapsack3/" target="_blank">Complete Knapsack Problem</a></li>
+<li><a href="https://labuladong.online/algo/dynamic-programming/target-sum/" target="_blank">https://labuladong.online/algo/dynamic-programming/target-sum/</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="28-backtrack.html" class="navigation navigation-prev " aria-label="Previous page: Backtrack">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="101-parenthese_problems.html" class="navigation navigation-next " aria-label="Next page: Parenthese Problems">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Dynamic Programming","level":"1.3.3","depth":2,"next":{"title":"Parenthese Problems","level":"1.3.4","depth":2,"path":"02-algorithms/101-parenthese_problems.md","ref":"02-algorithms/101-parenthese_problems.md","articles":[]},"previous":{"title":"Backtrack","level":"1.3.2","depth":2,"path":"02-algorithms/28-backtrack.md","ref":"02-algorithms/28-backtrack.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"02-algorithms/32-dynamic_programming.md","mtime":"2024-08-19T08:36:23.419Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2024-08-19T08:37:02.254Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
