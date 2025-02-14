@@ -6,7 +6,51 @@
 
 1. The `diameter` is the largest value of `sum(max_depth_of_left_subtree, max_depth_of_right_subtree)` of all of nodes of the tree
 
+**Presentation At Code Level**
+
+```uml
+@startmindmap
+
+* Presentation 
+
+**:<b>linked node</b>
+For most tree related problems;
+***:<b>example</b>
+<code>
+type Node struct {
+    val      int
+    Left  *TreeNode
+    Right *TreeNode
+}
+</code>
+;
+**:<b>array</b>
+1. binary heap
+2. Union-Find;
+***:<b>example</b>
+<code>
+</code>
+;
+
+**:<b>hashtab</b>
+grap relevant problems;
+***:<b>example</b>
+<code>
+// also know as Adjacency List
+tree := map[int][]int{
+    1: {2, 3},
+    2: {4},
+    3: {5, 6},
+}
+</code>
+;
+
+@endmindmap
+```
+
+
 **Traverse**
+
 1. BF
     * Usually based on `Queue`
     * Can also use recursive
@@ -15,6 +59,193 @@
     * InOrder
     * PostOrder
 
+**Natural Connection**
+
+* The nature of `Binary Tree`, `N-ary Tree` and `Forest` are actually `SAME`. The only differences are ONLY
+
+    * How many children are there in the tree
+    * In `Forest`, there are multiple tress
+    * The presentation of `Tree` and `Forest` are different
+
+* Binary Tree -> N-ary Tree -> Forest
+
+```uml
+
+@startmindmap
+
+* Tree 
+
+**: Binary Tree
+<code>
+type Node struct {
+    val      int
+    Left  *TreeNode
+    Right *TreeNode
+}
+</code>;
+
+*** DFS
+****: <b>Code</b> 
+<code>
+func Traverse(root *TreeNode) {
+    if root == nil {
+        return
+    }
+    // pre-order location. do something...
+    traverse(root.Left)
+    // in-order location.do something...
+    traverse(root.Right)
+    // post-order location. do something...
+}
+</code>;
+
+*** BFS
+****: <b>Code - Scenairo 1</b> 
+<code>
+func Travese(root *TreeNode) {
+    if root == nil {
+        return
+    }
+    q := []*TreeNode{root}
+    depth := 1
+
+    for len(q) > 0 {
+        sz := len(q)
+        for i := 0; i < sz; i++ {
+            cur := q[i]
+            // do something with current node
+            fmt.Printf("depth = %d, val = %d\n", depth, cur.Val)
+
+            // handle children
+            if cur.Left != nil {
+                q = append(q, cur.Left)
+            }
+            if cur.Right != nil {
+                q = append(q, cur.Right)
+            }
+        }
+        q = q[size:]
+        depth++
+    }
+}
+</code>;
+
+*****: <b>Code - Senario 2</b> 
+type State struct {
+    node  *TreeNode
+    depth int
+}
+
+func Traverse(root *TreeNode) {
+    if root == nil {
+        return
+    }
+    q := []State{{root, 1}}
+
+    for len(q) > 0 {
+        size := len(q)
+        for i:=0; i<size; i++ {
+            cur := q[i]
+            // do something with current node
+            fmt.Printf("depth = %d, val = %d\n", cur.depth, cur.node.Val)
+
+            // handle children
+            if cur.node.Left != nil {
+                q = append(q, State{cur.node.Left, cur.depth + 1})
+            }
+            if cur.node.Right != nil {
+                q = append(q, State{cur.node.Right, cur.depth + 1})
+            }
+        }
+        q = q[size:]
+    }
+}
+</code>;
+
+**: <b>NaryTree</b>
+<code>
+type Node struct {
+    val      int
+    children []*Node
+}
+</code>;
+
+*** DFS
+****: Code 
+<code>
+func TraverseNary(root *Node) {
+    if root == nil {
+        return
+    }
+    // pre-order location. do something...
+    for _, child := range root.Children {
+        traverseNary(child)
+    }
+    // post-order location. do something...
+}
+</code>;
+
+*** BFS
+****: <b>Code - Scenario 1</b>
+<code>
+func TraverseNary(root *Node) {
+    if root == nil {
+        return
+    }
+    q := []*Node{root}
+    depth := 1
+    for len(q) > 0 {
+        sz := len(q)
+        for i := 0; i < sz; i++ {
+            cur := q[i]
+            // do something with the node
+            // handle children
+            for _, child := range cur.children {
+                q = append(q, child)
+            }
+        }
+        q = q[size:]
+        depth++
+    }
+}
+</code>;
+
+*****: <b>Code - Senario 2</b>
+<code>
+type State struct {
+    node  *Node
+    depth int
+}
+
+func TraveseNary(root *Node) {
+    if root == nil {
+        return
+    }
+    q := []State{}
+    q = append(q, State{root, 1})
+
+    for len(q) > 0 {
+        sz := len(q)
+        for i := 0; i < sz; i++ {
+            state := q[i]
+            cur := state.node
+            depth := state.depth
+            // do soemthing with current node
+            fmt.Printf("depth = %d, val = %d\n", depth, cur.Val)
+            // handle children
+            for _, child := range cur.Children {
+                q = append(q, State{child, depth + 1}) // record the depth of each node
+            }
+        }
+        q = q[size:]
+    }
+}
+</code>;
+
+
+** Forest
+@endmindmap
+```
 
 ## Thinking Patterns
 1. Tree Traverse. `Traverse` 
