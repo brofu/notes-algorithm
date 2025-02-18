@@ -420,6 +420,15 @@ func fib(N int) int {
 
 ## Problems
 
+### Problems - Traverse & SubTasks
+
+| Problems | Solutions | Key Points | code| Comments |
+| :- |:- |:- | :- | :-- |
+| [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/) | 1. Traverse<br>2. Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc226.go) | | 
+| [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/) | 1. BFS <br>2. DFS traverse with 3-nary tree | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc116.go) | | 
+| [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/) | 1. Sub Task idea| Definition of Recursion function | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc114.go) | | 
+| - |- |- | - | -- |
+
 ### Problems - Ancestor Problems
 
 | Problems | Solutions | Key Points | code| Comments |
