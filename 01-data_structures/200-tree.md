@@ -327,7 +327,7 @@ Two ways to resolve Binary Tree relevant problems:
 >这两类思路分别对应着 回溯算法核心框架(and DFS) 和 动态规划核心框架。
 
 
-Similarity to `Backtrack`, `DFS` and `Dynamic Programming`
+Similarity to `Backtrack`, `DFS` and `Dynamic Programming`, `Divide and conquer`
 
 >动归/DFS/回溯算法都可以看做二叉树问题的扩展，只是它们的关注点不同：
 >
@@ -402,6 +402,10 @@ func fib(N int) int {
     // post-order location
     return left + right
 }
+</code>;
+
+***:Divide and conquer
+<code>
 </code>;
 
 @endmindmap
