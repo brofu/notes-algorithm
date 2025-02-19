@@ -427,7 +427,34 @@ func fib(N int) int {
 | [226. Invert Binary Tree](https://leetcode.com/problems/invert-binary-tree/description/) | 1. Traverse<br>2. Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc226.go) | | 
 | [116. Populating Next Right Pointers in Each Node](https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/) | 1. BFS <br>2. DFS traverse with 3-nary tree | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc116.go) | | 
 | [114. Flatten Binary Tree to Linked List](https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/) | 1. Sub Task idea| Definition of Recursion function | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc114.go) | | 
-| - |- |- | - | -- |
+| - |- |- | - | - |
+
+### Problems - Construction
+
+>二叉树的构造问题一般都是使用「分解问题」的思路：构造整棵树 = 根节点 + 构造左子树 + 构造右子树。
+
+| Problems | Solutions | Key Points | code| Comments |
+| :- |:- |:- | :- | :-- |
+| [654. Maximum Binary Tree](https://leetcode.com/problems/maximum-binary-tree/description/) | 1. Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc654.go) | | 
+| [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) | 1. Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc105.go) | Complexity analyze | 
+| [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/) | 1. Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc106.go) | Similar Complexity as 105 | 
+| [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/) | 1. Sub Task| Check if current node only has 1 child | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc889.go) | | 
+| - |- |- | - | - |
+
+**Complexity Analyse**
+
+* [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) 
+
+Pay attention to the `left-skewed tree` and `right-skewed tree`
+
+| Tree Shape          | Recursive Calls | `for` Loop Work per Call | Total Complexity |
+|:---------------------|:----------------|:--------------------------|:------------------|
+| **Right-Skewed Tree** | O(n)          | O(1)                     | **O(n)**         |
+| **Left-Skewed Tree**  | O(n)          | O(n)                     | **O(n²)**        |
+| **Balanced Tree**     | O(log n)      | O(n) per level           | **O(n log n)**   |
+| **Optimized (Hash Map Lookup) Right-Skewed** | O(n) | O(1)                     | **O(n)**         |
+| **Optimized (Hash Map Lookup) Left-Skewed** | O(n) | O(1)                     | **O(n)**         |
+| **Optimized (Hash Map Lookup) Balanced** | O(log n) | O(1)                     | **O(log n)**         |
 
 ### Problems - Ancestor Problems
 
