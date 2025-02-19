@@ -454,7 +454,33 @@ Pay attention to the `left-skewed tree` and `right-skewed tree`
 | **Balanced Tree**     | O(log n)      | O(n) per level           | **O(n log n)**   |
 | **Optimized (Hash Map Lookup) Right-Skewed** | O(n) | O(1)                     | **O(n)**         |
 | **Optimized (Hash Map Lookup) Left-Skewed** | O(n) | O(1)                     | **O(n)**         |
-| **Optimized (Hash Map Lookup) Balanced** | O(log n) | O(1)                     | **O(log n)**         |
+| **Optimized (Hash Map Lookup) Balanced** | O(log n) | O(1)                     | **O(n)**         |
+
+### Problems - Serialization
+
+>什么样的序列化的数据可以反序列化出唯一的一棵二叉树？
+>
+>当二叉树中节点的值不存在重复时：
+>
+如果序列化结果中不包含空指针，只给出一种遍历顺序，那么无法还原出唯一的一棵二叉树。
+>
+如果序列化结果中不包含空指针的信息，且给出两种遍历顺序，分两种情况：
+>
+* 如果给出的是前序和中序，或者后序和中序，那么可以还原出唯一的一棵二叉树。
+>
+* 如果给出前序和后序，那么无法还原出唯一的一棵二叉树。
+>
+如果你的序列化结果中包含空指针的信息，且只给出一种遍历顺序，也要分两种情况：
+>
+* 如果给出的是前序或者后序，那么可以还原出唯一的一棵二叉树。
+>
+* 如果给出的是中序，那么无法还原出唯一的一棵二叉树。
+
+
+| Problems | Solutions | Key Points | code| Complexity |
+| :- |:- |:- | :- | :-- |
+| [297. Serialize and Deserialize Binary Tree](https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/) | 1. Sub Task<br>2. BFS| 1. The return value of traverse function<br>2. Same approach to deserialize | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc297.go) | O(N)| 
+| - |- |- | - | - |
 
 ### Problems - Ancestor Problems
 
