@@ -2,7 +2,7 @@
     "title": "Brofu's Talk",
     "sortedBy": "-",
     "unchanged": ["MySQL","ClickHouse", "ElasticSearch"],
-    "plugins": ["plantuml-cloud", "disqus"] ,
+    "plugins": ["plantuml-cloud", "disqus", "katex"] ,
     "pluginsConfig": {
     "plantuml-cloud": {
       "umlPath": "images/uml",
@@ -16,5 +16,4 @@
     "shortName":"brofu-tech"
     }
   }
-
 }
