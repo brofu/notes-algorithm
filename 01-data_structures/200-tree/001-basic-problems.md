@@ -16,6 +16,17 @@
 | [1457. Pseudo-Palindromic Paths in a Binary Tree](https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/description/) | Traverse + DFS | bit operation to check if a path is pseudo-palindromic. refer to the code | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1457.go) | | 
 | - |- |- | - | - |
 
+
+### Problems - Sub Tasks
+
+| Problems | Solutions | Key Points | code| Complexity |
+| :- |:- |:- | :- | :-- |
+| [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) | Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc105.go) | | 
+| [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/) | Sub Task| HashMap to reduce time complexity| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc106.go) | | 
+| [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/) | Sub Task| 1. HashMap to reduce time complexity<br>2. Use slice index | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc889.go) | | 
+| - |- |- | - | - |
+
+
 ### Problems - Construction
 
 >二叉树的构造问题一般都是使用「分解问题」的思路：构造整棵树 = 根节点 + 构造左子树 + 构造右子树。
