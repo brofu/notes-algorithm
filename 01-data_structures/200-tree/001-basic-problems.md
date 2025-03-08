@@ -1,6 +1,6 @@
 ## Tree Basic Problems
 
-### Problems - Traverse & SubTasks
+### Problems - Traverse 
 
 | Problems | Solutions | Key Points | code| Complexity |
 | :- |:- |:- | :- | :-- |
@@ -24,6 +24,8 @@
 | [105. Construct Binary Tree from Preorder and Inorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/) | Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc105.go) | | 
 | [106. Construct Binary Tree from Inorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/) | Sub Task| HashMap to reduce time complexity| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc106.go) | | 
 | [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/) | Sub Task| 1. HashMap to reduce time complexity<br>2. Use slice index | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc889.go) | | 
+| [331. Verify Preorder Serialization of a Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/) | 1. Sub Task<br>2. Iteration| 1. With `Sub Task` approach, we actually construct the tree. And need to check every scenarios if the string is valid.<br>2. With `iteration`, consider to reduce the space complexity| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc331.go) | | 
+| [894. All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees/description/) | Sub Task| How to abstract the `Sub Tasks` into the `left and right child tree`? Refer to the code. | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc894.go) | | 
 | - |- |- | - | - |
 
 
