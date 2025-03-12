@@ -26,6 +26,8 @@
 | [889. Construct Binary Tree from Preorder and Postorder Traversal](https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/) | Sub Task| 1. HashMap to reduce time complexity<br>2. Use slice index | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc889.go) | | 
 | [331. Verify Preorder Serialization of a Binary Tree](https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/) | 1. Sub Task<br>2. Iteration| 1. With `Sub Task` approach, we actually construct the tree. And need to check every scenarios if the string is valid.<br>2. With `iteration`, consider to reduce the space complexity| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc331.go) | | 
 | [894. All Possible Full Binary Trees](https://leetcode.com/problems/all-possible-full-binary-trees/description/) | Sub Task| How to abstract the `Sub Tasks` into the `left and right child tree`? Refer to the code. | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc894.go) | | 
+| [998. Maximum Binary Tree II](https://leetcode.com/problems/maximum-binary-tree-ii/description/) | Sub Task| | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc998.go) | | 
+| [1110. Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/description/) | Sub Task|How to make sure a node need to collected? | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1110.go) | | 
 | - |- |- | - | - |
 
 
