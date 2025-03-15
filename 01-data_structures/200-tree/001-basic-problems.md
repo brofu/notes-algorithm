@@ -31,6 +31,19 @@
 | - |- |- | - | - |
 
 
+### Problems - BFS
+
+| Problems | Solutions | Key Points | code| Complexity |
+| :- |:- |:- | :- | :-- |
+| [102. Binary Tree Level Order Traversal](https://leetcode.com/problems/binary-tree-level-order-traversal/description/) | BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc102.go) | | 
+| [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/) | BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc107.go) | | 
+| [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/) | 1. BFS<br>2. `Pointer Apporached` for constant extra space. Refer to the code | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc117.go) | | 
+| [662. Maximum Width of Binary Tree](https://leetcode.com/problems/maximum-width-of-binary-tree/description/) | 1. BFS<br>2. DFS| Record the node index | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc662.go) | | 
+| [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/) | 1. BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc515.go) | | 
+| - |- |- | - | - |
+
+
+
 ### Problems - Construction
 
 >二叉树的构造问题一般都是使用「分解问题」的思路：构造整棵树 = 根节点 + 构造左子树 + 构造右子树。
