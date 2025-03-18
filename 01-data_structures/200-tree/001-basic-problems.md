@@ -39,7 +39,10 @@
 | [107. Binary Tree Level Order Traversal II](https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/) | BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc107.go) | | 
 | [117. Populating Next Right Pointers in Each Node II](https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/) | 1. BFS<br>2. `Pointer Apporached` for constant extra space. Refer to the code | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc117.go) | | 
 | [662. Maximum Width of Binary Tree](https://leetcode.com/problems/maximum-width-of-binary-tree/description/) | 1. BFS<br>2. DFS| Record the node index | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc662.go) | | 
-| [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/) | 1. BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc515.go) | | 
+| [515. Find Largest Value in Each Tree Row](https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/) | BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc515.go) | | 
+| [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/) | BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc637.go) | | 
+| [958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/) | BFS |3 scenarios. Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc958.go) | | 
+| [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/) | 1. BFS<br>2. DFS |With DFS, use list or map? Refer to the code| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1161.go) | | 
 | - |- |- | - | - |
 
 
