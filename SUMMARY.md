@@ -5,6 +5,7 @@
     * [Principles](01-data_structures/200-tree/000-principles.md)
     * [Basic Problems](01-data_structures/200-tree/001-basic-problems.md)
     * [Complete Tree Problems](01-data_structures/200-tree/002-complete-tree-problems.md)
+    * [Variants Binary Heap](01-data_structures/200-tree/003-variants-binary-heap.md)
     * [Other Problems](01-data_structures/200-tree/010-other-problems.md)
   * [Array](01-data_structures/000-array.md)
   * [String](01-data_structures/050-string.md)

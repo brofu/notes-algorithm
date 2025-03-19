@@ -30,7 +30,6 @@
 | [1110. Delete Nodes And Return Forest](https://leetcode.com/problems/delete-nodes-and-return-forest/description/) | Sub Task|How to make sure a node need to collected? | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1110.go) | | 
 | - |- |- | - | - |
 
-
 ### Problems - BFS
 
 | Problems | Solutions | Key Points | code| Complexity |
@@ -43,6 +42,8 @@
 | [637. Average of Levels in Binary Tree](https://leetcode.com/problems/average-of-levels-in-binary-tree/description/) | BFS | | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc637.go) | | 
 | [958. Check Completeness of a Binary Tree](https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/) | BFS |3 scenarios. Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc958.go) | | 
 | [1161. Maximum Level Sum of a Binary Tree](https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/) | 1. BFS<br>2. DFS |With DFS, use list or map? Refer to the code| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1161.go) | | 
+| [1302. Deepest Leaves Sum](https://leetcode.com/problems/deepest-leaves-sum/description/) |  BFS|| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1302.go) | | 
+| [1609. Even Odd Tree](https://leetcode.com/problems/even-odd-tree/description/) | BFS|| [code](https://github.com/brofu/leetcode/blob/main/tree/tree_lc1609.go) | | 
 | - |- |- | - | - |
 
 

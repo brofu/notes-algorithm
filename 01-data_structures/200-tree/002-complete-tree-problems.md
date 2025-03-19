@@ -1,4 +1,4 @@
-### Problems - Complete Tree Problems
+## Problems - Complete Tree Problems
 
 Note the definition of `Complete Tree` and `Perfect Tree`
 
