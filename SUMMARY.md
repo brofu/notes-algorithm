@@ -9,6 +9,7 @@
     * [Other Problems](01-data_structures/200-tree/010-other-problems.md)
   - [Graph](01-data_structures/300-graph/readme.md)
     * [Basic Problems](01-data_structures/300-graph/001-basic-problems.md)
+    * [Union Find](01-data_structures/300-graph/002-union-find.md)
   * [Array](01-data_structures/000-array.md)
   * [String](01-data_structures/050-string.md)
   * [List](01-data_structures/100-list.md)

@@ -20,7 +20,9 @@
 ***** BFS
 
 *** <b>UnDirected Grap</b>
-**** Bipartite Graph Checking
+**** <b>Bipartite Graph Checking</b>
+****: <b>Union-Find</b>
+Problems of Connectivity of Un-Directed Graph;
 
 @endmindmap
 ```
