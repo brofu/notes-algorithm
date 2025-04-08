@@ -1,5 +1,9 @@
 ## Basic Graph Problems
 
+* DG Cycle Detection (Directed Graph)
+* Topological Sorting (Directed Graph)
+* Bipartite Graph (Un-Directed Graph)
+
 ### Problems - DG Cycle Detection (Directed Graph)
 
 | Problems | Solutions | Key Points | code| Complexity |
