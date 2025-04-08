@@ -59,10 +59,23 @@
 | [990. Satisfiability of Equality Equations](https://leetcode.com/problems/satisfiability-of-equality-equations/description/) | Union-Find |根据 == 和 != 分成两部分，先处理 == 算式，使得他们连通；然后处理 != 算式，检查不等关系是否破坏相等关系的连通性。| [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc990.go) | | 
 | [684. Redundant Connection](https://leetcode.com/problems/redundant-connection/description/) | Union-Find || [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc684.go) | | 
 | [547. Number of Provinces](https://leetcode.com/problems/number-of-provinces/description/) | 1. BFS/DFS<br> 2. Union-Find || [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc547.go) | | 
+| [947. Most Stones Removed with Same Row or Column](https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/) | Union-Find || [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc947.go) | | 
 | - |- |- | - | - |
 
+
 ### Problems - Validating Tree by Graph
+
+* With `Un-Directed Graph` (261)
+    * No Ring
+    * Only ONE `Connected Component`
+
+* With `Directed Graph` (1361)
+    * `Root` node has 0 indegree and all the others have 1 indegree (No ring)
+    * There is only ONE `root`
+    * Only ONE `Connected Component`
+
 | Problems | Solutions | Key Points | code| Complexity |
 | :- |:- |:- | :- | :-- |
 | [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/description/) | | Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc261.go) | | 
+| [1361. Validate Binary Tree Nodes](https://leetcode.com/problems/validate-binary-tree-nodes/description/) | |Utilize an `indegree` array. Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc1361.go) | | 
 | - |- |- | - | - |
