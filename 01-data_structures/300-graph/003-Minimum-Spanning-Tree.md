@@ -46,7 +46,7 @@
 | Problems | Solutions | Key Points | code| Complexity |
 | :- |:- |:- | :- | :-- |
 | [1135. Connecting Cities With Minimum Cost](https://leetcode.com/problems/connecting-cities-with-minimum-cost/description/) |`Kruskal`| | [code](https://github.com/brofu/leetcode/blob/main/graph/mst/mst_lc1135.go) | | 
-| [1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/description/) |1. `Kruskal`<br> 2. `Prim`| Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/graph/mst/mst_lc1584.go) | | 
+| [1584. Min Cost to Connect All Points](https://leetcode.com/problems/min-cost-to-connect-all-points/description/) |1. `Kruskal`<br> 2. `Prim` <br> 3. `Prim` with optimization | Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/graph/mst/mst_lc1584.go) |1. O(N^2logN)<br> 2. O(N^2logN)<br>3. O(N^2)| 
 | - |- |- | - | - |
 
 

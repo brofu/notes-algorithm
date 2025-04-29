@@ -11,6 +11,7 @@
     * [Basic Problems](01-data_structures/300-graph/001-basic-problems.md)
     * [Union Find](01-data_structures/300-graph/002-union-find.md)
     * [Minimum Spanning Tree](01-data_structures/300-graph/003-Minimum-Spanning-Tree.md)
+    * [Shortest Path](01-data_structures/300-graph/004-shortest-path.md)
   * [Array](01-data_structures/000-array.md)
   * [String](01-data_structures/050-string.md)
   * [List](01-data_structures/100-list.md)
