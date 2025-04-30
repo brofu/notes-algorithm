@@ -9,7 +9,7 @@
 
 **Time Complexity** 
 
-* O(ElogV)
+O(ElogV)
     * Each `V` should enter the PQ at least ONCE.
     * For each `V`, need to calculate NEW distance (to the `start`)
     * Finally, around O(ElogV)
@@ -17,7 +17,29 @@
 **Pre-Condition to Utilize Dijkstra**
 
 1. Directed Weighted graph
-2. No negative weight
+
+2. No negative weight. But why?
+    
+    >标准Dijkstra算法是计算最短路径的，但是为什么Dijkstra算法不允许存在负权重边么？
+    >
+    >因为Dijkstra计算最短路径的正确性依赖一个前提：路径中每增加一条边，路径的总权重就会增加。
+    >
+    >其实把这个结论反过来也是OK的：
+    >
+    >如果想计算最长路径，路径中每增加一条边，路径的总权重就会减少。要是能够满足这个条件，也可以用Dijkstra算法。
+    >
+    >比如LC1514
+
+**Key Points**
+
+* About the `code template`
+    Why do we need this code piece?
+    ```
+    if distToCurrentNode > distToNode[currentNode] {
+        continue
+    }
+    ```
+    This can improve the performance if a node with a larger distance get into the `priority queue` before the smallest distance
 
 #### Problems
 
@@ -25,6 +47,5 @@
 | :- |:- |:- | :- | :-- |
 | [743. Network Delay Time](https://leetcode.com/problems/network-delay-time/description/) | Dijkstra| | [code](https://github.com/brofu/leetcode/blob/main/graph/graph_lc743.go) | | 
 | [1631. Path With Minimum Effort](https://leetcode.com/problems/path-with-minimum-effort/description/) | Dijkstra| How to define and update the `effortToNode` array? | [code](https://github.com/brofu/leetcode/blob/main/graph/dijkstra/dijkstra_lc1631.go) | | 
+| [1514. Path with Maximum Probability](https://leetcode.com/problems/path-with-maximum-probability/description/) | | | [code](https://github.com/brofu/leetcode/blob/main/graph/dijkstra/dijkstra_lc1514.go) | | 
 | - |- |- | - | - |
-
-
