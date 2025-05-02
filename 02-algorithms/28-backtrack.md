@@ -1,10 +1,33 @@
 # Backtrack
 
-## Key Points
-
 ## Thinking Patterns
 
-## An Example
+>抽象地说，解决一个回溯问题，实际上就是遍历一棵决策树的过程，树的每个叶子节点存放着一个合法答案。把整棵树遍历一遍，把叶子节点上的答案都收集起来，就能得到所有的合法答案。
+>
+>站在回溯树的一个节点上，只需要思考3个问题：
+>
+1. 路径. 也就是已经做出的选择。
+>
+2. 择列表. 也就是当前可以做的选择。
+>
+3. 结束条件. 也就是到达决策树底层，无法再做选择的条件。
+
+
+## Code Template
+
+```
+result = []
+
+def backtrack(path, choices_list):
+    if can_finish:
+        result.add(path)
+        return
+    
+    for choice in choinces_list:
+        choose a choice // usually need to update the `path`
+        backtrack(path, new_choice_list)
+        cancel the choice // revert the updating to `path`
+```
 
 ## Problems
 
