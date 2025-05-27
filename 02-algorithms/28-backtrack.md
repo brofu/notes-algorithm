@@ -54,11 +54,13 @@ And the key points of these problems is the `backtrack tree`
 | Combination Problems | [216](https://leetcode.com/problems/combination-sum-iii/description/)  | |[code](backtrack_lc216.go) | type 1 | 
 | Combination Problems | [40](https://leetcode.com/problems/combination-sum-ii/description/)  | |[code](backtrack_lc40.go) | type 2 | 
 | Combination Problems | [39](https://leetcode.com/problems/combination-sum/description/)  | |[code](backtrack_lc39.go) | type 3 | 
-| Set Problems | [78](https://leetcode.com/problems/subsets/description/)  | |[code](backtrack_lc78.go) | type 1 | 
+| Set Problems | [78. Subsets](https://leetcode.com/problems/subsets/description/)  | |[code](backtrack_lc78.go) | type 1 | 
 | Set Problems | [90](https://leetcode.com/problems/subsets-ii/description/)  | |[code](backtrack_lc90.go) | type 2 | 
-| Queen Problems |  | | | | 
-| Sudo Problems |  | | | | 
-| Parentheses Problems |  | | | | 
+| | | || -| 
+
+**Notes**
+1. About `Set Problems`. 
+   * How to abstract the 3 core questions about the backtrack framework
 
 ### Problems - Variants Problems
 
@@ -80,6 +82,23 @@ And the key points of these problems is the `backtrack tree`
 | Problems | Possible Solutions | Key Points | Code | Comments |
 | :- | :- | :- |:- | :- | 
 | [494. Target Sum](https://leetcode.com/problems/target-sum/description/) | 1. Backtrack <br> 2. DP | 1. Pruning with memo | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc494.go) | | 
+| [37. Sudoku Solver](https://leetcode.com/problems/sudoku-solver/description/) | backtrack | How to control the flow? Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc37.go) | | 
+| [51. N-Queens](https://leetcode.com/problems/n-queens/description/) | backtrack | How to control the flow? N-Queen v.s. Sudoku Problem | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc51.go) | | 
+| [52. N-Queens II](https://leetcode.com/problems/n-queens-ii/description/) | backtrack | | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc52.go) | | 
+| | | | |- | 
+
+**Notes**
+1. More about the **N-Queen** problems
+    * Time Complexity
+        * O(N^N) ==> O(N!) with O(1) prune algorithm
+        * `cols`, `diag1` and `diag2`
+    * Space Complexity 
+        * O(N^2) if store the location data with `board` (n * n matrix)
+        * O(N) with `cols`, `diag1`, and `diag2`
+    * How does `cols`, `diag1`, `diag2` work?
+        * 主对角线的特点：所有在同一主对角线上的格子都满足： `row − col = 常数`  
+        * 但 row - col 的范围是从 − 𝑁 + 1 到 𝑁 − 1 不能直接作为数组下标 
+        * 所以我们统一加上偏移 𝑁 − 1 把范围映射到 [0, 2N-2]
 
 **References**
 1. https://labuladong.online/algo/dynamic-programming/target-sum/
