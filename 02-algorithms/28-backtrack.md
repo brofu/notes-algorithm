@@ -59,38 +59,38 @@ And the key points of these problems is the `backtrack tree`
 | | | || -| 
 
 **Notes**
-1. About `Set Problems`. 
+* About `Set Problems`. 
    * How to abstract the 3 core questions about the backtrack framework
 
-2. Time Complexity and Space Complexity
+* Time Complexity and Space Complexity
 
-* 78 Subsets
-    * Time Complexity
-        * There are total `2^n` of subsets
-        * For each set, we need to copy `k` number, if there is `k` numbers in this subset
-        * So, the overall complexity is `SUM(k*C(n, k))`. `k` is the number of elements in the subsets, and `C(n, k)` is the number of subsets with `k` numbers in it
-        * `SUM(k * C(n,k)) = n * 2^(n-1)`. So, overall is `O(n*2^n)`
-    * Space 
-        * The backtrack is around O(n)
-        * The output is same as time complexity
+    * 78 Subsets
+        * Time Complexity
+            * There are total `2^n` of subsets
+            * For each set, we need to copy `k` number, if there is `k` numbers in this subset
+            * So, the overall complexity is `SUM(k*C(n, k))`. `k` is the number of elements in the subsets, and `C(n, k)` is the number of subsets with `k` numbers in it
+            * `SUM(k * C(n,k)) = n * 2^(n-1)`. So, overall is `O(n*2^n)`
+        * Space 
+            * The backtrack is around O(n)
+            * The output is same as time complexity
 
-* 77 Combinations
-    * Time Complexity
-        * `O(k*C(n, k))`, `k` is the number of elements in the subset, and `C(n, k)` is number of subsets with k numbers in each of them
+    * 77 Combinations
+        * Time Complexity
+            * `O(k*C(n, k))`, `k` is the number of elements in the subset, and `C(n, k)` is number of subsets with k numbers in each of them
+            * Space Complexity
+            * The backtrack is around O(k)
+            * The output also `O(k*C(n,k))`
+
+    * 40 Combinations II  
+        * Time Complexity
+            * Without pruning, roughly about `O(n*2^n)`. 
+                * The worst case is to check all the nodes in the recursive tree, that's `O(2^n)`
+                * And need to copy the right answers, which up to O(n) 
+                * So overall, it's around O(n*2^n)
+            * But with pruning, the time complexity reduce efficiently. 
         * Space Complexity
-        * The backtrack is around O(k)
-        * The output also `O(k*C(n,k))`
-
-* 40 Combinations II  
-    * Time Complexity
-        * Without pruning, roughly about `O(n*2^n)`. 
-            * The worst case is to check all the nodes in the recursive tree, that's `O(2^n)`
-            * And need to copy the right answers, which up to O(n) 
-            * So overall, it's around O(n*2^n)
-        * But with pruning, the time complexity reduce efficiently. 
-    * Space Complexity
-        * For the backtrack stack space, the worst case would be O(n). If the `target == n`, and all the numbers in candidates are 1 
-        * For the output, if there is `r` results, the worst case would be O(r*n)
+            * For the backtrack stack space, the worst case would be O(n). If the `target == n`, and all the numbers in candidates are 1 
+            * For the output, if there is `r` results, the worst case would be O(r*n)
 
 
       
