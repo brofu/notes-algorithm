@@ -50,17 +50,36 @@ And the key points of these problems is the `backtrack tree`
 | :- | :- | :- |:- | :- | 
 | Permutation Problems | [46](https://leetcode.com/problems/permutations/description/) | | [code](backtrack_lc46.go) | type 1 | 
 | Permutation Problems | [47](https://leetcode.com/problems/permutations-ii/description/) | | [code](backtrack_lc47.go) | type 2 | 
-| Combination Problems | [77](https://leetcode.com/problems/combinations/description/)  | |[code](backtrack_lc77.go) | type 1 | 
+| Combination Problems | [77](https://leetcode.com/problems/combinations/description/)  | Same as 78 |[code](backtrack_lc77.go) | type 1 | 
 | Combination Problems | [216](https://leetcode.com/problems/combination-sum-iii/description/)  | |[code](backtrack_lc216.go) | type 1 | 
 | Combination Problems | [40](https://leetcode.com/problems/combination-sum-ii/description/)  | |[code](backtrack_lc40.go) | type 2 | 
 | Combination Problems | [39](https://leetcode.com/problems/combination-sum/description/)  | |[code](backtrack_lc39.go) | type 3 | 
-| Set Problems | [78. Subsets](https://leetcode.com/problems/subsets/description/)  | |[code](backtrack_lc78.go) | type 1 | 
-| Set Problems | [90](https://leetcode.com/problems/subsets-ii/description/)  | |[code](backtrack_lc90.go) | type 2 | 
+| Set Problems | [78. Subsets](https://leetcode.com/problems/subsets/description/)  | 1. How to control the flow <br> 2. Complexity analyse |[code](backtrack_lc78.go) | type 1 | 
+| Set Problems | [90](https://leetcode.com/problems/subsets-ii/description/)  |1. How to prune. Refer to code |[code](backtrack_lc90.go) | type 2 | 
 | | | || -| 
 
 **Notes**
 1. About `Set Problems`. 
    * How to abstract the 3 core questions about the backtrack framework
+
+2. Time Complexity and Space Complexity
+
+  * 78 Subsets
+    * Time Complexity
+      * There are total `2^n` of subsets
+      * For each set, we need to copy `k` number, if there is `k` numbers in this subset
+      * So, the overall complexity is `SUM(k*C(n, k))`. `k` is the number of elements in the subsets, and `C(n, k)` is the number of subsets with `k` numbers in it
+      * `SUM(k * C(n,k)) = n * 2^(n-1)`. So, overall is `O(n*2^n)`
+    * Space 
+      * The backtrack is around O(n)
+      * The output is same as time complexity
+
+  * 77 Combinations
+    * Time Complexity
+      * `O(k*C(n, k))`, `k` is the number of elements in the subset, and `C(n, k)` is number of subsets with k numbers in each of them
+    * Space Complexity
+      * The backtrack is around O(k)
+      * The output also `O(k*C(n,k))`
 
 ### Problems - Variants Problems
 
