@@ -91,7 +91,15 @@ And the key points of these problems is the `backtrack tree`
         * Space Complexity
             * For the backtrack stack space, the worst case would be O(n). If the `target == n`, and all the numbers in candidates are 1 
             * For the output, if there is `r` results, the worst case would be O(r*n)
-
+  
+    * 39 Combination Sum
+        * Time Complexity
+            * Recursive call times around O(2^T), T is the `target`
+            * Copy cost of validate result, O(T).
+            * Overall is O(T*2^T). 
+        * Space Complexity
+          * Recursive stack, O(T). If all `1`.
+          * Result storage. O(T*R), R is valid number of results
 
       
 3. Type 2 Subset & Combinations pruning. 90, 40
