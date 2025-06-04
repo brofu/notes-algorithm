@@ -101,6 +101,41 @@ And the key points of these problems is the `backtrack tree`
           * Recursive stack, O(T). If all `1`.
           * Result storage. O(T*R), R is valid number of results
 
+    * 46 Permutations
+        * Time Complexity
+            * Recursive call times:
+              Count ALL the nodes of the recursive tree:
+                1 + n + n*(n-1) + n*(n-1)*(n-2) + ... + n!
+                = sum(n!/(n-k)!) where k = 0, 1, ... n,
+                = sum(n!/d!) where d = n-k
+                = n! * sum(1/d!) where d = 0, 1, ... n, < n! * e
+                so, we have O(e*n!)
+            * Copy time cost: O(n)
+            * Overall: O(n*n!)
+        * Space complexity
+            * Recursive call stack: O(n)
+            * `visted` array: O(n)
+            * Result storage: O(n*n!)
+            * Overall: O(n*n!)
+    * 47 Permutations II
+        * Time Complexity
+            * Recursive call times: ==> Wrong
+        	    * if there are k repeated elements, with pruning:
+            	* then we have 1 + (n-k) + (n-k)(n-k-1) + ... + (n-k)!
+            	* totally we have e*(n-k)! times of recursive call
+            * Recursive call times: ==> Right
+	            * let `m` as the number of distinct elements
+            	* `Ki` as the repeat times of the `ith` number in `m`
+            	* then, the `leaf nodes` are `n!/(k1!*K2!*...*Km!)`
+            * Copy time cost O(n)
+            * Sort (if we use sort): `O(n*lgn)`
+            * Overall `O(n*n!/(K1!*K2!*...*Km!))`
+        *   Space Complexity
+            * Recursive stack `O(n)`
+            * `visited` array `O(n)`
+            * `hitMap` (if we use map) `n + (n-1) + (n-2) + ... + 1 = O(n^2)`
+            * Result store: `O(n*R)`, R is the result, R < n!
+            * R = `n!/(K1!*K2!*...*Km!)`
       
 3. Type 2 Subset & Combinations pruning. 90, 40
     * Check via recursive tree
