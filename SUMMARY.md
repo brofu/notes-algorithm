@@ -18,6 +18,7 @@
   * [Heap](01-data_structures/400-heap.md)
 - [Algorithms](02-algorithms/readme.md)
   * [Sorting](02-algorithms/00-sorting.md)
+  * [DFS And BFS](02-algorithms/27-DFS_and_BFS.md)
   * [Backtrack](02-algorithms/28-backtrack.md)
   * [Dynamic Programming](02-algorithms/32-dynamic_programming.md)
   * [Parenthese Problems](02-algorithms/101-parenthese_problems.md)
