@@ -4,11 +4,13 @@
 
 ## Problems - Islands Problems
 
-| Problems | Possible Solutions | Key Points | Code | Comments |
+| Problems | Possible Solutions | Key Points | Code | Similar Problems | Comments |
 | :- | :- | :- |:- | :- | 
-| [200. Number of Islands](https://leetcode.com/problems/number-of-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc200.go) | | 
-| [1254. Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1254.go) | | 
-| | | | |- | 
+| [200. Number of Islands](https://leetcode.com/problems/number-of-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc200.go) | | |
+| [1254. Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1254.go) | | |
+| [1905. Count Sub Islands](https://leetcode.com/problems/count-sub-islands/description/) | dfs, bfs, union-find | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1905.go) | 1992 | |
+| [1020. Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1020.go) | | |
+| | | | | |- | 
 
 **Complexity Analyze**
 
@@ -26,5 +28,13 @@ Space Complexity
 4. Use `grid` as  visited, no extra spaces
 
 1254
+
+>Similar as 200
+
+1905
+
+>Similar as 200
+
+1905
 
 >Similar as 200
