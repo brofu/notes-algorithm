@@ -10,11 +10,18 @@
 | [1254. Number of Closed Islands](https://leetcode.com/problems/number-of-closed-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1254.go) | | |
 | [1905. Count Sub Islands](https://leetcode.com/problems/count-sub-islands/description/) | dfs, bfs, union-find | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1905.go) | 1992 | |
 | [1020. Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1020.go) | | |
+| [694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc694.go) | | |
 | | | | | |- | 
+
+**Key Points**
+
+1. 694
+    How to present the shape of islands with `BFS` and `DFS`?
+
 
 **Complexity Analyze**
 
-200.
+1. 200.
 
 >Time Complexity
 1. O(N+4N) = O(N) N = m*n
@@ -27,14 +34,6 @@ Space Complexity
 3. Worst case example, `m=1, n = N, and all equals 1`
 4. Use `grid` as  visited, no extra spaces
 
-1254
-
->Similar as 200
-
-1905
-
->Similar as 200
-
-1905
+2. 1254, 1905, 1020, 694
 
 >Similar as 200
