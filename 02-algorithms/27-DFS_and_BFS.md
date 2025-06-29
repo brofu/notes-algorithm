@@ -11,6 +11,7 @@
 | [1905. Count Sub Islands](https://leetcode.com/problems/count-sub-islands/description/) | dfs, bfs, union-find | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1905.go) | 1992 | |
 | [1020. Number of Enclaves](https://leetcode.com/problems/number-of-enclaves/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1020.go) | | |
 | [694. Number of Distinct Islands](https://leetcode.com/problems/number-of-distinct-islands/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc694.go) | | |
+| [695. Max Area of Island](https://leetcode.com/problems/max-area-of-island/description/) | dfs, bfs | | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc695.go) | | |
 | | | | | |- | 
 
 **Key Points**
