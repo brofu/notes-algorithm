@@ -140,6 +140,17 @@ And the key points of these problems is the `backtrack tree`
 3. Type 2 Subset & Combinations pruning. 90, 40
     * Check via recursive tree
     * `sort` and `nums[i] == nums[i-1]`
+  
+
+### Problems - Permutation, Combination and Set Problems - variants
+
+**Problems**
+
+| Problems | Key Points | Possible Solutions | Comments | |
+| :- | :- | :- |:- | :- | 
+| [967. Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/) | | [code](backtrack_lc967.go) | type 1 | 
+| | | || -| 
+
 
 ### Problems - Variants Problems
 
