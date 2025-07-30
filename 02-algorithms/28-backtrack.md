@@ -142,16 +142,40 @@ And the key points of these problems is the `backtrack tree`
     * `sort` and `nums[i] == nums[i-1]`
   
 
-### Problems - Permutation, Combination and Set Problems - variants
+### Problems - Permutation, Combination and Set Problems - Variants
 
 **Problems**
 
-| Problems | Key Points | Possible Solutions | Comments | |
+| Problems | Key Points | Possible Solutions | Code |Comments |
 | :- | :- | :- |:- | :- | 
-| [967. Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/) | | [code](backtrack_lc967.go) | type 1 | 
+| [967. Numbers With Same Consecutive Differences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/) | | | [code](backtrack_lc967.go) | | 
+| [491. Non-decreasing Subsequences](https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/) | | | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc491.go) | Combination Problem type II | 
+| [980. Unique Paths III](https://leetcode.com/problems/unique-paths-iii/description/) | | DFS with backtrack | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc980.go) | Permutation actually | 
+| [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/) | | backtrack | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc131.go) | Combination/Set problems | 
+| [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/description/) | | backtrack | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc93.go) | Combination/Set problems | 
 | | | || -| 
 
+* Complexity
 
+    * 980
+        * O(E!) E is the number of walkable cells. Why not O(m*n)? 
+        * O(m*n) 
+     
+    * 131
+        * TC 3 solutions
+            * O(2^n*n^2) 
+            * O(2^n*n) + O(n^3)
+            * O(2^n*n) + O(n^2)
+        * SC       
+            * O(2^n*n) + O(n)
+        * Refer to the code 
+
+    * 93
+        * TC
+            * O(C(n-1, 3)*n). C(n-1, 3) would be roughly 3^4, witch pruning.
+        * SC
+            * O(C(n-1, 3)*n)
+            
 ### Problems - Variants Problems
 
 | Types | Problems | Key Points | Possible Solutions | Comments |
