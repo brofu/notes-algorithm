@@ -153,6 +153,7 @@ And the key points of these problems is the `backtrack tree`
 | [980. Unique Paths III](https://leetcode.com/problems/unique-paths-iii/description/) | | DFS with backtrack | [code](https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc980.go) | Permutation actually | 
 | [131. Palindrome Partitioning](https://leetcode.com/problems/palindrome-partitioning/description/) | | backtrack | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc131.go) | Combination/Set problems | 
 | [93. Restore IP Addresses](https://leetcode.com/problems/restore-ip-addresses/description/) | | backtrack | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc93.go) | Combination/Set problems | 
+| [17. Letter Combinations of a Phone Number](https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/) | | backtrack | [code](https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc17.go) | | 
 | | | || -| 
 
 * Complexity
@@ -175,7 +176,14 @@ And the key points of these problems is the `backtrack tree`
             * O(C(n-1, 3)*n). C(n-1, 3) would be roughly 3^4, witch pruning.
         * SC
             * O(C(n-1, 3)*n)
-            
+
+    * 17
+        * TC
+            * O(3^n*n)
+        * SC
+            * O(3^n*n)
+
+
 ### Problems - Variants Problems
 
 | Types | Problems | Key Points | Possible Solutions | Comments |
