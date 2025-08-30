@@ -62,6 +62,7 @@ Space Complexity
 | [841. Keys and Rooms](https://leetcode.com/problems/keys-and-rooms/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc841.go) | | |
 | [433. Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc433.go) | | |
 | [1926. Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc1926.go) | | |
+| [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc1091.go) | | |
 | | | | | |- | 
 
 ### Complexity Analyze
