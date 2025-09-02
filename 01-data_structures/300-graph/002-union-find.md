@@ -79,3 +79,10 @@
 | [261. Graph Valid Tree](https://leetcode.com/problems/graph-valid-tree/description/) | | Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc261.go) | | 
 | [1361. Validate Binary Tree Nodes](https://leetcode.com/problems/validate-binary-tree-nodes/description/) | |Utilize an `indegree` array. Refer to the code | [code](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc1361.go) | | 
 | - |- |- | - | - |
+
+### Problems - Other
+
+| Problems | Possible Solutions | Key Points | Code | Similar Problems | Comments |
+| :- | :- | :- |:- | :- | 
+| [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/description/) | bfs, dfs, union-find | | [bfs](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc721.go) <br> [union-find](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc721.go) | | |
+| | | | | |- | 

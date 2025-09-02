@@ -63,6 +63,10 @@ Space Complexity
 | [433. Minimum Genetic Mutation](https://leetcode.com/problems/minimum-genetic-mutation/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc433.go) | | |
 | [1926. Nearest Exit from Entrance in Maze](https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc1926.go) | | |
 | [1091. Shortest Path in Binary Matrix](https://leetcode.com/problems/shortest-path-in-binary-matrix/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc1091.go) | | |
+| [994. Rotting Oranges](https://leetcode.com/problems/rotting-oranges/description/) | bfs | | [code](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc994.go) | | |
+| [721. Accounts Merge](https://leetcode.com/problems/accounts-merge/description/) | bfs, dfs, union-find | | [bfs](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc721.go) <br> [union-find](https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc721.go) | | |
+| [127. Word Ladder](https://leetcode.com/problems/word-ladder/description/) | bfs | | [bfs](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc127.go) | | |
+| [365. Water and Jug Problem](https://leetcode.com/problems/water-and-jug-problem/description/) | bfs | | [bfs](https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc365.go) | | |
 | | | | | |- | 
 
 ### Complexity Analyze
