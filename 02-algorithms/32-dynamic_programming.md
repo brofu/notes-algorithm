@@ -73,63 +73,59 @@ There are some types, classic dp problems, such as
 
 Usually there **2 templates** for `sub sequences problems`, 
 
-> 一个一维的 dp 数组：
+> 第一种思路是，一个一维的 dp 数组：
+>
 > ```
-> int n = array.length;
-> int[] dp = new int[n];
+> // dp: 在子数组arr[0..i]中，以arr[i]结尾的子序列的(最值)长度是dp[i]
+> dp := make([]int, n)
 > for (int i = 1; i < n; i++) {
 >    for (int j = 0; j < i; j++) {
 >        dp[i] = 最值(dp[i], dp[j] + ...)
 >    }
 > }
 > ```
-> `最长递增子序列` 和 `最大子数组和` 都是这个思路。
->
-> 在这个思路中 dp 数组的定义是：
->
-> **在子数组arr[0..i]中，以arr[i]结尾的子序列的(最值)长度是dp[i]** ==> Why not define it as `the LIS of arr[0...i]? Refer to 1.
->
-> For example, `300. Longest Increasing Subsequence` and `53. Maximum Subarray`
+> Examples:
+>  * `最长递增子序列` 
+>  * `最大子数组和` 
 >
 > 第二种思路模板是一个二维的 dp 数组：
 >
 > ```
-> n := len(arr)
 > dp := make([][]int, n)
-> // 初始化 dp 数组
 > for i := 0; i < n; i++ {
 >     dp[i] = make([]int, n)
 >     for j := 0; j < n; j++ {
->         if arr[i] == arr[j] {
->             // 当 arr[i] 与 arr[j] 相等时，可以做出选择，做出选择的结果是...
+>         if arr[i] == arr[j] { // 当 arr[i] 与 arr[j] 相等时，可以做出选择，做出选择的结果是...
 >             dp[i][j] = dp[i][j] + ...
->         } else {
->             // 当 arr[i] 与 arr[j] 不相等时，可以做出选择，做出选择的结果是 ...
+>         } else { // 当 arr[i] 与 arr[j] 不相等时，可以做出选择，做出选择的结果是 ...
 >             dp[i][j] = min(...)
 >         }
 >     }
 > }
 > ```
-> 涉及两个字符串/数组的场景，dp 数组的定义如下：
 >
-> **在子数组arr1[0..i]和子数组arr2[0..j]中，我们要求的子序列长度为dp[i][j]**
+> Examples:
 >
-> For example, `1143. Longest Common Subsequence` and `72. Edit Distance`
+> * 涉及两个字符串/数组的场景，dp 数组的定义如下：
+>   * 在子数组arr1[0..i]和子数组arr2[0..j]中，我们要求的子序列长度为dp[i][j]**
+>   * `1143. Longest Common Subsequence` 
+>   * `72. Edit Distance`
 >
-> 只涉及一个字符串/数组的场景，dp 数组的定义如下：
->
-> 在 子数组 array[i..j] 中，我们要求的子序列的长度为 dp[i][j]。
-> 
-> For example, `516. Longest Palindromic Subsequence`
+> * 只涉及一个字符串/数组的场景，dp 数组的定义如下：
+>   * 在子数组array[i..j]中，我们要求的子序列的长度为dp[i][j]
+>   * `516. Longest Palindromic Subsequence`
 
 
 **Problems**
 
-| Problems | Possible Solutions | Key Points | Code | Comments |
-| :- | :- | :- |:- | :- | 
+| Problems | Possible Solutions | Key Points | Code | Similar Problems | Comments |
+| :- | :- | :- |:- | :- | :- |
+| [72. Edit Distance](https://leetcode.com/problems/edit-distance/description/) | DP | | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc72.go) | 1. []() |  |
+| [516. Longest Palindromic Subsequence](https://leetcode.com/problems/longest-palindromic-subsequence/description/) | DP | | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc516.go) | 1. [1312. Minimum Insertion Steps to Make a String Palindrome](https://github.com/brofu/leetcode/blob/main/dp/dp_lc1312.go) |  |
 | [673. Number of Longest Increasing Subsequence](https://leetcode.com/problems/number-of-longest-increasing-subsequence/description/) | 1. DP <br> 2. BIT | 1. DP <br> * How to setup/update dp array for `dpCount`? | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc2263.go) | | 
 | [300. Longest Increasing Subsequence](https://leetcode.com/problems/longest-increasing-subsequence/description/) | * DP <br> * BinarySearch | * How to define the dp table <br>* Compress space complexity | [dp](https://github.com/brofu/leetcode/blob/main/dp/dp_lc300.go) <br> [bs](https://github.com/brofu/leetcode/blob/main/dp/dp_lc300.go) | | 
 | [354. Russian Doll Envelopes](https://leetcode.com/problems/russian-doll-envelopes/description/) | * DP <br> * BinarySearch | | [dp](https://github.com/brofu/leetcode/blob/main/dp/dp_lc354.go) <br> [bs](https://github.com/brofu/leetcode/blob/main/dp/dp_lc354.go) | | 
+| [931. Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/description/) | * DP <br> * dfs | | [dp](https://github.com/brofu/leetcode/blob/main/dp/dp_lc931.go) <br> [dfs](https://github.com/brofu/leetcode/blob/main/dp/dp_lc931.go) | | 
 | [53. Maximum Subarray](https://leetcode.com/problems/maximum-subarray/description/) | 1. DP <br>2. Sliding Window <br> 3. Prefix Sum | * How to define the dp table <br>* Compress space complexity | [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc53.go) | | 
 | [72. Edit Distance](https://leetcode.com/problems/edit-distance/description/) | 1. DP table 2-D DP table <br> 2. DP function | * How to define dp function<br>* How to define DP table <br>* how to compress space with O(N)| [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc72.go) | | 
 | [1143. Longest Common Subsequence](https://leetcode.com/problems/longest-common-subsequence/description/) | 1. DP table 2-D DP table <br> 2. DP function | * How to define dp function<br>* How to define DP table <br>* how to compress space with O(N)* DP 2-D DP table| [code](https://github.com/brofu/leetcode/blob/main/dp/dp_lc1143.go) | Almost same as problem 72.| 

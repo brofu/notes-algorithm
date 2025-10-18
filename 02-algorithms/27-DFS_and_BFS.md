@@ -40,6 +40,11 @@ Space Complexity
 >Similar as 200
 
 
+## Problems - N-nary Tree 
+| Problems | Possible Solutions | Key Points | Code | Similar Problems | Comments |
+| :- | :- | :- |:- | :- | 
+| [931. Minimum Falling Path Sum](https://leetcode.com/problems/minimum-falling-path-sum/description/) | * DP <br> * dfs | | [dp](https://github.com/brofu/leetcode/blob/main/dp/dp_lc931.go) <br> [dfs](https://github.com/brofu/leetcode/blob/main/dp/dp_lc931.go) | | |
+| | |  | | - | 
 
 ## BFS
 
