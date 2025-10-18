@@ -1,0 +1,826 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>DFS And BFS · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="28-backtrack.html" />
+    
+    
+    <link rel="prev" href="00-sorting.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-data_structures/readme.html">
+            
+                <a href="../01-data_structures/readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-data_structures/200-tree/readme.html">
+            
+                <a href="../01-data_structures/200-tree/readme.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../01-data_structures/200-tree/000-principles.html">
+            
+                <a href="../01-data_structures/200-tree/000-principles.html">
+            
+                    
+                    Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../01-data_structures/200-tree/001-basic-problems.html">
+            
+                <a href="../01-data_structures/200-tree/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../01-data_structures/200-tree/002-complete-tree-problems.html">
+            
+                <a href="../01-data_structures/200-tree/002-complete-tree-problems.html">
+            
+                    
+                    Complete Tree Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../01-data_structures/200-tree/003-variants-binary-heap.html">
+            
+                <a href="../01-data_structures/200-tree/003-variants-binary-heap.html">
+            
+                    
+                    Variants Binary Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../01-data_structures/200-tree/010-other-problems.html">
+            
+                <a href="../01-data_structures/200-tree/010-other-problems.html">
+            
+                    
+                    Other Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-data_structures/300-graph/readme.html">
+            
+                <a href="../01-data_structures/300-graph/readme.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../01-data_structures/300-graph/001-basic-problems.html">
+            
+                <a href="../01-data_structures/300-graph/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../01-data_structures/300-graph/002-union-find.html">
+            
+                <a href="../01-data_structures/300-graph/002-union-find.html">
+            
+                    
+                    Union Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../01-data_structures/300-graph/003-Minimum-Spanning-Tree.html">
+            
+                <a href="../01-data_structures/300-graph/003-Minimum-Spanning-Tree.html">
+            
+                    
+                    Minimum Spanning Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../01-data_structures/300-graph/004-shortest-path.html">
+            
+                <a href="../01-data_structures/300-graph/004-shortest-path.html">
+            
+                    
+                    Shortest Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-data_structures/000-array.html">
+            
+                <a href="../01-data_structures/000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-data_structures/050-string.html">
+            
+                <a href="../01-data_structures/050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-data_structures/100-list.html">
+            
+                <a href="../01-data_structures/100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-data_structures/400-heap.html">
+            
+                <a href="../01-data_structures/400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="00-sorting.html">
+            
+                <a href="00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.2" data-path="27-DFS_and_BFS.html">
+            
+                <a href="27-DFS_and_BFS.html">
+            
+                    
+                    DFS And BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="28-backtrack.html">
+            
+                <a href="28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="32-dynamic_programming.html">
+            
+                <a href="32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="101-parenthese_problems.html">
+            
+                <a href="101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="200-math_problems.html">
+            
+                <a href="200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >DFS And BFS</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="dfs-and-bfs">DFS And BFS</h1>
+<h2 id="thinking-patterns---dfs-vs-backtrack">Thinking Patterns - DFS v.s. Backtrack</h2>
+<h2 id="problems---islands-problems">Problems - Islands Problems</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Similar Problems</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-islands/description/" target="_blank">200. Number of Islands</a></td>
+<td style="text-align:left">dfs, bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc200.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-closed-islands/description/" target="_blank">1254. Number of Closed Islands</a></td>
+<td style="text-align:left">dfs, bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1254.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/count-sub-islands/description/" target="_blank">1905. Count Sub Islands</a></td>
+<td style="text-align:left">dfs, bfs, union-find</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1905.go" target="_blank">code</a></td>
+<td style="text-align:left">1992</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-enclaves/description/" target="_blank">1020. Number of Enclaves</a></td>
+<td style="text-align:left">dfs, bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc1020.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-distinct-islands/description/" target="_blank">694. Number of Distinct Islands</a></td>
+<td style="text-align:left">dfs, bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc694.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/max-area-of-island/description/" target="_blank">695. Max Area of Island</a></td>
+<td style="text-align:left">dfs, bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc695.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Key Points</strong></p>
+<ol>
+<li>694
+ How to present the shape of islands with <code>BFS</code> and <code>DFS</code>?</li>
+</ol>
+<p><strong>Complexity Analyze</strong></p>
+<ol>
+<li>200.</li>
+</ol>
+<blockquote>
+<p>Time Complexity</p>
+<ol>
+<li>O(N+4N) = O(N) N = m*n</li>
+<li>Loop all the node outside, m*n</li>
+<li>Overall O(N)</li>
+</ol>
+<p>Space Complexity</p>
+<ol>
+<li>For DFS, Recursive stack depth: worst at <code>O(N)</code></li>
+<li>For BFS, Queue length: worst at <code>O(N)</code></li>
+<li>Worst case example, <code>m=1, n = N, and all equals 1</code></li>
+<li>Use <code>grid</code> as  visited, no extra spaces</li>
+</ol>
+</blockquote>
+<ol>
+<li>1254, 1905, 1020, 694</li>
+</ol>
+<blockquote>
+<p>Similar as 200</p>
+</blockquote>
+<h2 id="problems---n-nary-tree">Problems - N-nary Tree</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Similar Problems</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/minimum-falling-path-sum/description/" target="_blank">931. Minimum Falling Path Sum</a></td>
+<td style="text-align:left"><em> DP <br> </em> dfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc931.go" target="_blank">dp</a> <br> <a href="https://github.com/brofu/leetcode/blob/main/dp/dp_lc931.go" target="_blank">dfs</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h2 id="bfs">BFS</h2>
+<h3 id="thinking-patterns">Thinking Patterns</h3>
+<blockquote>
+<ol>
+<li><p>BFS&#x7B97;&#x6CD5;&#x7684;&#x672C;&#x8D28;&#x5C31;&#x662F;&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x5C42;&#x5E8F;&#x904D;&#x5386;&#x3002;</p>
+</li>
+<li><p>&#x884D;&#x751F;&#x5230;&#x591A;&#x53C9;&#x6811;&#x7684;&#x5C42;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x548C;&#x56FE;&#x7684;&#x904D;&#x5386;&#xFF08;&#x589E;&#x52A0;visited&#x6570;&#x7EC4;&#xFF09;</p>
+</li>
+<li><p>BFS &#x7B97;&#x6CD5;&#x7ECF;&#x5E38;&#x7528;&#x6765;&#x6C42;&#x89E3;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x95EE;&#x9898;&#x3002;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#xFF0C;&#x90FD;&#x53EF;&#x4EE5;&#x7C7B;&#x6BD4;&#x6210;&#x4E8C;&#x53C9;&#x6811;&#x6700;&#x5C0F;&#x6DF1;&#x5EA6;&#x95EE;&#x9898;&#xFF08;&#x5BFB;&#x627E;&#x8DDD;&#x79BB;&#x6839;&#x8282;&#x70B9;&#x6700;&#x8FD1;&#x7684;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#xFF09;&#xFF0C;&#x9012;&#x5F52;&#x904D;&#x5386;&#x5FC5;&#x987B;&#x8981;&#x904D;&#x5386;&#x6574;&#x68F5;&#x6811;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x624D;&#x80FD;&#x627E;&#x5230;&#x76EE;&#x6807;&#x8282;&#x70B9;&#xFF0C;&#x800C;&#x5C42;&#x5E8F;&#x904D;&#x5386;&#x4E0D;&#x9700;&#x8981;&#x904D;&#x5386;&#x6240;&#x6709;&#x8282;&#x70B9;&#x5C31;&#x80FD;&#x641E;&#x5B9A;&#xFF0C;&#x6240;&#x4EE5;&#x5C42;&#x5E8F;&#x904D;&#x5386;&#x9002;&#x5408;&#x89E3;&#x51B3;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+</ol>
+</blockquote>
+<h3 id="bfs-problems">BFS Problems</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Similar Problems</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/sliding-puzzle/description/" target="_blank">773. Sliding Puzzle</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc773.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/open-the-lock/description/" target="_blank">752. Open the Lock</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc752.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/complete-binary-tree-inserter/description/" target="_blank">919. Complete Binary Tree Inserter</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc919.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/keys-and-rooms/description/" target="_blank">841. Keys and Rooms</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc841.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/minimum-genetic-mutation/description/" target="_blank">433. Minimum Genetic Mutation</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc433.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/nearest-exit-from-entrance-in-maze/description/" target="_blank">1926. Nearest Exit from Entrance in Maze</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc1926.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/shortest-path-in-binary-matrix/description/" target="_blank">1091. Shortest Path in Binary Matrix</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc1091.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/rotting-oranges/description/" target="_blank">994. Rotting Oranges</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc994.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/accounts-merge/description/" target="_blank">721. Accounts Merge</a></td>
+<td style="text-align:left">bfs, dfs, union-find</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc721.go" target="_blank">bfs</a> <br> <a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc721.go" target="_blank">union-find</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/word-ladder/description/" target="_blank">127. Word Ladder</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc127.go" target="_blank">bfs</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/water-and-jug-problem/description/" target="_blank">365. Water and Jug Problem</a></td>
+<td style="text-align:left">bfs</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc365.go" target="_blank">bfs</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="complexity-analyze">Complexity Analyze</h3>
+<p>Refer to the code</p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="00-sorting.html" class="navigation navigation-prev " aria-label="Previous page: Sorting">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="28-backtrack.html" class="navigation navigation-next " aria-label="Next page: Backtrack">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"DFS And BFS","level":"1.3.2","depth":2,"next":{"title":"Backtrack","level":"1.3.3","depth":2,"path":"02-algorithms/28-backtrack.md","ref":"02-algorithms/28-backtrack.md","articles":[]},"previous":{"title":"Sorting","level":"1.3.1","depth":2,"path":"02-algorithms/00-sorting.md","ref":"02-algorithms/00-sorting.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus","katex"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"02-algorithms/27-DFS_and_BFS.md","mtime":"2025-10-18T04:44:44.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-18T04:45:31.300Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

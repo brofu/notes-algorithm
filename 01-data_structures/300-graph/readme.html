@@ -1,0 +1,814 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Graph · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="001-basic-problems.html" />
+    
+    
+    <link rel="prev" href="../200-tree/010-other-problems.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../200-tree/readme.html">
+            
+                <a href="../200-tree/readme.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../200-tree/000-principles.html">
+            
+                <a href="../200-tree/000-principles.html">
+            
+                    
+                    Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../200-tree/001-basic-problems.html">
+            
+                <a href="../200-tree/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../200-tree/002-complete-tree-problems.html">
+            
+                <a href="../200-tree/002-complete-tree-problems.html">
+            
+                    
+                    Complete Tree Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../200-tree/003-variants-binary-heap.html">
+            
+                <a href="../200-tree/003-variants-binary-heap.html">
+            
+                    
+                    Variants Binary Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../200-tree/010-other-problems.html">
+            
+                <a href="../200-tree/010-other-problems.html">
+            
+                    
+                    Other Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="001-basic-problems.html">
+            
+                <a href="001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="002-union-find.html">
+            
+                <a href="002-union-find.html">
+            
+                    
+                    Union Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="003-Minimum-Spanning-Tree.html">
+            
+                <a href="003-Minimum-Spanning-Tree.html">
+            
+                    
+                    Minimum Spanning Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="004-shortest-path.html">
+            
+                <a href="004-shortest-path.html">
+            
+                    
+                    Shortest Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../000-array.html">
+            
+                <a href="../000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../050-string.html">
+            
+                <a href="../050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../100-list.html">
+            
+                <a href="../100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../400-heap.html">
+            
+                <a href="../400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../02-algorithms/readme.html">
+            
+                <a href="../../02-algorithms/readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../02-algorithms/00-sorting.html">
+            
+                <a href="../../02-algorithms/00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-algorithms/27-DFS_and_BFS.html">
+            
+                <a href="../../02-algorithms/27-DFS_and_BFS.html">
+            
+                    
+                    DFS And BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../02-algorithms/28-backtrack.html">
+            
+                <a href="../../02-algorithms/28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../02-algorithms/32-dynamic_programming.html">
+            
+                <a href="../../02-algorithms/32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../02-algorithms/101-parenthese_problems.html">
+            
+                <a href="../../02-algorithms/101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../02-algorithms/200-math_problems.html">
+            
+                <a href="../../02-algorithms/200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Graph</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="graph">Graph</h1>
+<h2 id="nature-of-graph">Nature of <code>Graph</code></h2>
+<p><code>Graph</code> actually a <code>K-ary Tree</code>, which allows nodes pointing to it&apos;s <code>parent</code> node or <code>other</code> nodes (siblings, children, etc).</p>
+<h2 id="logic-level-presentation">Logic Level Presentation</h2>
+<p>And it&apos;s logic presentation  can be like this, </p>
+<pre><code>type Vertex struct {
+    id        int
+    neighbors []*Vertex  //
+}
+</code></pre><p>It&apos;s very similar to the <code>K-ary Tree</code></p>
+<pre><code>type TreeNode struct {
+    val      int
+    children []*TreeNode
+}
+</code></pre><h2 id="code-level-presentation">Code Level Presentation</h2>
+<ul>
+<li><p><strong><code>Adjacency List</code></strong></p>
+<pre><code>  // graph[x] all the neighbors to x
+  var graph [][]int
+</code></pre></li>
+<li><p><strong><code>Adjacency Matrix</code></strong></p>
+<pre><code>  // matrix[x][y] if there E(x, y) exists
+  var matrix [][]bool
+</code></pre></li>
+</ul>
+<ul>
+<li><strong><code>Adjacency List</code></strong> V.S.  <strong><code>Adjacency Matrix</code></strong> </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Presentation</th>
+<th>Complexity</th>
+<th>Usage Scenarios</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Adjacency List</td>
+<td>1. Space Complexity: O(V+E)<br>2. Check if E(u, v) exists: O(degree(u))<br>3. Iterate all neighbors of u: O(degree(u))</td>
+<td>1. <strong>Sparse Graph</strong> (E &#xAB; V^2)<br>2. High frequent iterating all the neighbors, such as DFS, BFS, Dijkstra etc.</td>
+</tr>
+<tr>
+<td>Adjacency Matrix</td>
+<td>1. Space Complexity: O(V^2)<br>2. Check if E(u, v) exists: O(1)<br>3. Iterate all neighbors of u: O(V)</td>
+<td>1. <strong>Dense Graph</strong> <br>2. High frequent to check if E(u, v) exists, for example, <code>Floyd-Warshall</code></td>
+</tr>
+</tbody>
+</table>
+<h2 id="concepts">Concepts</h2>
+<ul>
+<li><code>Degree</code>. <code>InDegree</code>, <code>OutDegree</code></li>
+</ul>
+<h2 id="sub-types">Sub Types</h2>
+<p>Above mentioned topics are based on <code>Directed Unweighted Graph</code>. But there are more sub types of Graph. </p>
+<ul>
+<li><strong>Directed Weighted Graph</strong></li>
+</ul>
+<pre><code>// Adjacency List     
+
+type Edge struct {
+    To int
+    Weight int
+}
+// graph[x], all the neighbors of x, with weight
+var graph [][]Edge
+
+
+// Adjacency Matrix
+
+// graph[u][v], the weight of E(u,v). if 0, means E(u, v) not exists
+var graph [][]int
+</code></pre><ul>
+<li><strong>Undirected Weighted/Unweighted Graph</strong></li>
+</ul>
+<p><code>Undirected</code> actually means <code>each-direction</code> between 2 nodes. So, I can be presented by above code</p>
+<h2 id="common-algorithms-of-sub-types">Common Algorithms of Sub Types</h2>
+<table>
+<thead>
+<tr>
+<th>Sub Type</th>
+<th>Algorithms</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Undirected Graph</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Directed Weighted Graph</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>Directed Unweighted Graph</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h2 id="code-template">Code Template</h2>
+<p>Take <code>Directed Weighted Graph</code> as an example. Since all the other can be presented by this also</p>
+<p><a href="https://github.com/brofu/leetcode/blob/main/graph/graph.go" target="_blank">An implementation of <code>Directed Weighted Grap</code> based on <code>Adjacency List</code></a></p>
+<h2 id="dfs">DFS</h2>
+<h3 id="traverse-verticesnodes-of-graph">Traverse Vertices(nodes) of Graph</h3>
+<ul>
+<li>Key difference between <code>traverse nodes of a graph</code> and <code>traver nodes of a tree</code></li>
+</ul>
+<blockquote>
+<p>&#x56FE;&#x7684;&#x904D;&#x5386;&#x5C31;&#x662F;&#x591A;&#x53C9;&#x6811;&#x904D;&#x5386; &#x7684;&#x5EF6;&#x4F38;&#xFF0C;&#x4E3B;&#x8981;&#x904D;&#x5386;&#x65B9;&#x5F0F;&#x8FD8;&#x662F;&#x6DF1;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;DFS&#xFF09;&#x548C;&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#xFF08;BFS&#xFF09;&#x3002;</p>
+<p>&#x552F;&#x4E00;&#x7684;&#x533A;&#x522B;&#x662F;&#xFF0C;&#x6811;&#x7ED3;&#x6784;&#x4E2D;&#x4E0D;&#x5B58;&#x5728;&#x73AF;&#xFF0C;&#x800C;&#x56FE;&#x7ED3;&#x6784;&#x4E2D;&#x53EF;&#x80FD;&#x5B58;&#x5728;&#x73AF;&#xFF0C;&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x9700;&#x8981;&#x6807;&#x8BB0;&#x904D;&#x5386;&#x8FC7;&#x7684;&#x8282;&#x70B9;&#xFF0C;&#x907F;&#x514D;&#x904D;&#x5386;&#x51FD;&#x6570;&#x5728;&#x73AF;&#x4E2D;&#x6B7B;&#x5FAA;&#x73AF;&#x3002;</p>
+<p>&#x904D;&#x5386;&#x56FE;&#x7684;&#x300C;&#x8282;&#x70B9;&#x300D;&#x548C;&#x300C;&#x8DEF;&#x5F84;&#x300D;&#x7565;&#x6709;&#x4E0D;&#x540C;&#xFF0C;&#x904D;&#x5386;&#x300C;&#x8282;&#x70B9;&#x300D;&#x65F6;&#xFF0C;&#x9700;&#x8981; visited &#x6570;&#x7EC4;&#x5728;&#x524D;&#x5E8F;&#x4F4D;&#x7F6E;&#x6807;&#x8BB0;&#x8282;&#x70B9;&#xFF1B;&#x904D;&#x5386;&#x56FE;&#x7684;&#x6240;&#x6709;&#x300C;&#x8DEF;&#x5F84;&#x300D;&#x65F6;&#xFF0C;&#x9700;&#x8981; onPath &#x6570;&#x7EC4;&#x5728;&#x524D;&#x5E8F;&#x4F4D;&#x7F6E;&#x6807;&#x8BB0;&#x8282;&#x70B9;&#xFF0C;&#x5728;&#x540E;&#x5E8F;&#x4F4D;&#x7F6E;&#x64A4;&#x9500;&#x6807;&#x8BB0;&#x3002;</p>
+</blockquote>
+<ul>
+<li>Code Difference</li>
+</ul>
+<pre><code>type Node struct {
+    val      int
+    children []*Node
+}
+
+func traverse(root *Node) {
+    if root == nil {
+        return
+    }
+    fmt.Println(&quot;visit&quot;, root.val) // pre-order location
+    for _, child := range root.children {
+        traverse(child)
+    }
+    // post-order location
+}
+
+type Vertex struct {
+    id        int
+    neighbors []*Vertex
+}
+func traverse(s *Vertex, visited []bool) {
+    if s == nil {
+        return
+    }
+    if visited[s.id] { // the usage of `vistied`
+        return
+    }
+
+    visited[s.id] = true // pre-order location
+    fmt.Println(&quot;visit&quot;, s.id)
+    for _, neighbor := range s.neighbors {
+        traverse(neighbor, visited)
+    }
+    // post-order location
+}
+</code></pre><ul>
+<li><p>Time Complexity</p>
+<ul>
+<li><code>Graph</code> O(V+E).   </li>
+<li><code>Binary Tree</code> O(N) </li>
+<li>Why time complexity of <code>Banary Tree</code> is O(N), instead of some thing like O(N + E)? </li>
+</ul>
+</li>
+</ul>
+<h3 id="traverse-edgespaths-of-graph">Traverse Edges(paths) of Graph</h3>
+<ul>
+<li>Key difference between <code>traverse paths of a graph</code> and <code>traver paths of a tree</code></li>
+</ul>
+<blockquote>
+<p>&#x5BF9;&#x4E8E;&#x6811;&#x7ED3;&#x6784;&#xFF0C;&#x904D;&#x5386;&#x6240;&#x6709;&#x300C;&#x8DEF;&#x5F84;&#x300D;&#x548C;&#x904D;&#x5386;&#x6240;&#x6709;&#x300C;&#x8282;&#x70B9;&#x300D;&#x662F;&#x6CA1;&#x4EC0;&#x4E48;&#x533A;&#x522B;&#x7684;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x56FE;&#x7ED3;&#x6784;&#xFF0C;&#x904D;&#x5386;&#x6240;&#x6709;&#x300C;&#x8DEF;&#x5F84;&#x300D;&#x548C;&#x904D;&#x5386;&#x6240;&#x6709;&#x300C;&#x8282;&#x70B9;&#x300D;&#x7A0D;&#x6709;&#x4E0D;&#x540C;&#x3002;</p>
+<p>&#x56E0;&#x4E3A;&#x5BF9;&#x4E8E;&#x6811;&#x7ED3;&#x6784;&#x6765;&#x8BF4;&#xFF0C;&#x53EA;&#x80FD;&#x7531;&#x7236;&#x8282;&#x70B9;&#x6307;&#x5411;&#x5B50;&#x8282;&#x70B9;&#xFF0C;&#x6240;&#x4EE5;&#x4ECE;&#x6839;&#x8282;&#x70B9; root &#x51FA;&#x53D1;&#xFF0C;&#x5230;&#x4EFB;&#x610F;&#x4E00;&#x4E2A;&#x8282;&#x70B9; targetNode &#x7684;&#x8DEF;&#x5F84;&#x90FD;&#x662F;&#x552F;&#x4E00;&#x7684;&#x3002;&#x6362;&#x53E5;&#x8BDD;&#x8BF4;&#xFF0C;&#x6211;&#x904D;&#x5386;&#x4E00;&#x904D;&#x6811;&#x7ED3;&#x6784;&#x7684;&#x6240;&#x6709;&#x8282;&#x70B9;&#x4E4B;&#x540E;&#xFF0C;&#x5FC5;&#x7136;&#x53EF;&#x4EE5;&#x627E;&#x5230; root &#x5230; targetNode &#x7684;&#x552F;&#x4E00;&#x8DEF;&#x5F84;&#xFF1A;</p>
+</blockquote>
+<pre><code>// K-ary Tree
+
+var path []*Node
+
+func traverse(root *Node, targetNode *Node) {
+
+    // base case
+    if root == nil {
+        return
+    }
+
+    // pre-order location
+    path = append(path, root)
+    if root.val == targetNode.val { // found the target
+        for _, node := range path {
+            fmt.Printf(&quot;%d &quot;, node.val)
+        }
+        return
+    }
+
+    for _, child := range root.children {
+        traverse(child, targetNode)
+    }
+
+    // post-order location
+    path = path[:len(path)-1]
+}
+
+
+// Graph. Find all the paths to target node
+
+var onPath []bool = make([]bool, graph.size())
+var path []int
+
+func traverse(graph Graph, src int, dest int) {
+
+    // base case
+    if src &lt; 0 || src &gt;= graph.size() {
+        return
+    }
+
+    if onPath[src] {
+        return
+    }
+
+    // pre-order location
+    onPath[src] = true
+    path = append(path, src)
+    if src == dest { // find the target
+        fmt.Println(&quot;find path:&quot;, path)
+        return
+    }
+
+    for _, e := range graph.neighbors(src) {
+        traverse(graph, e.to, dest)
+    }
+
+    // post-order location
+    path = path[:len(path)-1]
+
+    onPath[src] = false //why this?
+}
+</code></pre><blockquote>
+<p>&#x4E3A;&#x4EC0;&#x4E48;&#x904D;&#x5386;&#x8282;&#x70B9;&#x5C31;&#x4E0D;&#x7528;&#x64A4;&#x9500; visited &#x6570;&#x7EC4;&#x7684;&#x6807;&#x8BB0;&#xFF0C;&#x800C;&#x904D;&#x5386;&#x8DEF;&#x5F84;&#x9700;&#x8981;&#x5728;&#x540E;&#x5E8F;&#x4F4D;&#x7F6E;&#x64A4;&#x9500; onPath &#x6570;&#x7EC4;&#x7684;&#x6807;&#x8BB0;&#x5462;&#xFF1F;</p>
+<p>&#x56E0;&#x4E3A;&#x904D;&#x5386;&#x8282;&#x70B9;&#xFF0C;visited &#x6570;&#x7EC4;&#x7684;&#x804C;&#x8D23;&#x662F;&#x4FDD;&#x8BC1;&#x6BCF;&#x4E2A;&#x8282;&#x70B9;&#x53EA;&#x4F1A;&#x88AB;&#x8BBF;&#x95EE;&#x4E00;&#x6B21;&#x3002;&#x800C;&#x5BF9;&#x4E8E;&#x56FE;&#x7ED3;&#x6784;&#x6765;&#x8BF4;&#xFF0C;&#x8981;&#x60F3;&#x904D;&#x5386;&#x6240;&#x6709;&#x8DEF;&#x5F84;&#xFF0C;&#x53EF;&#x80FD;&#x4F1A;&#x591A;&#x6B21;&#x8BBF;&#x95EE;&#x540C;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#xFF0C;&#x8FD9;&#x662F;&#x5173;&#x952E;&#x7684;&#x533A;&#x522B;&#x3002;</p>
+</blockquote>
+<h3 id="about-visited-and-onpath">About <code>visited</code> and <code>onPath</code></h3>
+<h2 id="bfs">BFS</h2>
+<blockquote>
+<p>&#x56FE;&#x7ED3;&#x6784;&#x7684;&#x5E7F;&#x5EA6;&#x4F18;&#x5148;&#x641C;&#x7D22;&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x591A;&#x53C9;&#x6811;&#x7684;&#x5C42;&#x5E8F;&#x904D;&#x5386;&#xFF0C;&#x65E0;&#x975E;&#x5C31;&#x662F;&#x52A0;&#x4E86;&#x4E00;&#x4E2A; visited &#x6570;&#x7EC4;&#x6765;&#x907F;&#x514D;&#x91CD;&#x590D;&#x904D;&#x5386;&#x8282;&#x70B9;&#x3002;</p>
+<p>&#x7406;&#x8BBA;&#x4E0A;BFS&#x904D;&#x5386;&#x4E5F;&#x9700;&#x8981;&#x533A;&#x5206;&#x904D;&#x5386;&#x6240;&#x6709;&#x300C;&#x8282;&#x70B9;&#x300D;&#x548C;&#x904D;&#x5386;&#x6240;&#x6709;&#x300C;&#x8DEF;&#x5F84;&#x300D;&#xFF0C;&#x4F46;&#x662F;&#x5B9E;&#x9645;&#x4E0A; BFS &#x7B97;&#x6CD5;&#x4E00;&#x822C;&#x53EA;&#x7528;&#x6765;&#x5BFB;&#x627E;&#x90A3;&#x6761;&#x6700;&#x77ED;&#x8DEF;&#x5F84;&#xFF0C;&#x4E0D;&#x4F1A;&#x7528;&#x6765;&#x6C42;&#x6240;&#x6709;&#x8DEF;&#x5F84;&#x3002;</p>
+</blockquote>
+<p>Three code templates of BFS on a <code>Graph</code></p>
+<pre><code>* Without Steps/Depths
+* With Steps/Depths
+* With Weights
+</code></pre>
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="../200-tree/010-other-problems.html" class="navigation navigation-prev " aria-label="Previous page: Other Problems">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="001-basic-problems.html" class="navigation navigation-next " aria-label="Next page: Basic Problems">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Graph","level":"1.2.2","depth":2,"next":{"title":"Basic Problems","level":"1.2.2.1","depth":3,"path":"01-data_structures/300-graph/001-basic-problems.md","ref":"01-data_structures/300-graph/001-basic-problems.md","articles":[]},"previous":{"title":"Other Problems","level":"1.2.1.5","depth":3,"path":"01-data_structures/200-tree/010-other-problems.md","ref":"01-data_structures/200-tree/010-other-problems.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus","katex"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"01-data_structures/300-graph/readme.md","mtime":"2025-10-18T04:44:44.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-18T04:45:31.300Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

@@ -1,0 +1,759 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Union Find · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="003-Minimum-Spanning-Tree.html" />
+    
+    
+    <link rel="prev" href="001-basic-problems.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../200-tree/readme.html">
+            
+                <a href="../200-tree/readme.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../200-tree/000-principles.html">
+            
+                <a href="../200-tree/000-principles.html">
+            
+                    
+                    Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../200-tree/001-basic-problems.html">
+            
+                <a href="../200-tree/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../200-tree/002-complete-tree-problems.html">
+            
+                <a href="../200-tree/002-complete-tree-problems.html">
+            
+                    
+                    Complete Tree Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../200-tree/003-variants-binary-heap.html">
+            
+                <a href="../200-tree/003-variants-binary-heap.html">
+            
+                    
+                    Variants Binary Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../200-tree/010-other-problems.html">
+            
+                <a href="../200-tree/010-other-problems.html">
+            
+                    
+                    Other Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="001-basic-problems.html">
+            
+                <a href="001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.2.2" data-path="002-union-find.html">
+            
+                <a href="002-union-find.html">
+            
+                    
+                    Union Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="003-Minimum-Spanning-Tree.html">
+            
+                <a href="003-Minimum-Spanning-Tree.html">
+            
+                    
+                    Minimum Spanning Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="004-shortest-path.html">
+            
+                <a href="004-shortest-path.html">
+            
+                    
+                    Shortest Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../000-array.html">
+            
+                <a href="../000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../050-string.html">
+            
+                <a href="../050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../100-list.html">
+            
+                <a href="../100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../400-heap.html">
+            
+                <a href="../400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../02-algorithms/readme.html">
+            
+                <a href="../../02-algorithms/readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../02-algorithms/00-sorting.html">
+            
+                <a href="../../02-algorithms/00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-algorithms/27-DFS_and_BFS.html">
+            
+                <a href="../../02-algorithms/27-DFS_and_BFS.html">
+            
+                    
+                    DFS And BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../02-algorithms/28-backtrack.html">
+            
+                <a href="../../02-algorithms/28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../02-algorithms/32-dynamic_programming.html">
+            
+                <a href="../../02-algorithms/32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../02-algorithms/101-parenthese_problems.html">
+            
+                <a href="../../02-algorithms/101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../02-algorithms/200-math_problems.html">
+            
+                <a href="../../02-algorithms/200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Union Find</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="union-find-problems-of-connectivity-in-un-directed-graph">Union-Find. Problems of Connectivity in Un-Directed Graph</h2>
+<h3 id="summary">Summary</h3>
+<blockquote>
+<p>&#x5E76;&#x67E5;&#x96C6;&#xFF08;Union Find&#xFF09;&#x7ED3;&#x6784;&#x662F;&#x4E8C;&#x53C9;&#x6811;&#x7ED3;&#x6784;&#x7684;&#x884D;&#x751F;&#xFF0C;&#x7528;&#x4E8E;&#x9AD8;&#x6548;&#x89E3;&#x51B3;&#x65E0;&#x5411;&#x56FE;&#x7684;&#x8FDE;&#x901A;&#x6027;&#x95EE;&#x9898;&#xFF0C;&#x53EF;&#x4EE5;&#x5728;</p>
+<p>O(1)&#x65F6;&#x95F4;&#x5185;&#x5408;&#x5E76;&#x4E24;&#x4E2A;&#x8FDE;&#x901A;&#x5206;&#x91CF;&#xFF0C;</p>
+<p>O(1)&#x65F6;&#x95F4;&#x5185;&#x67E5;&#x8BE2;&#x4E24;&#x4E2A;&#x8282;&#x70B9;&#x662F;&#x5426;&#x8FDE;&#x901A;&#xFF0C;</p>
+<p>O(1)&#x65F6;&#x95F4;&#x5185;&#x67E5;&#x8BE2;&#x8FDE;&#x901A;&#x5206;&#x91CF;&#x7684;&#x6570;&#x91CF;&#x3002;</p>
+</blockquote>
+<h3 id="concepts">Concepts</h3>
+<ul>
+<li><p>Connected Graph</p>
+<ul>
+<li>The entire graph has only one connected component</li>
+<li>There is a path between every pair of nodes</li>
+</ul>
+</li>
+<li><p>Disconnected Graph</p>
+<ul>
+<li>The graph is split into multiple parts</li>
+<li>Each part is connected internally, but there are no edges between parts</li>
+</ul>
+</li>
+<li><p>Connected Component</p>
+<ul>
+<li>In an undirected graph, a connected component is a maximal subset of vertices such that there is a path between any two vertices within that subset</li>
+</ul>
+</li>
+</ul>
+<h3 id="properties">Properties</h3>
+<ul>
+<li><p><strong>Reflexivity</strong>: A node p is connected to itself.</p>
+</li>
+<li><p><strong>Symmetry</strong>: If node p is connected to node q, then node q is also connected to node p.</p>
+</li>
+<li><p><strong>Transitivity</strong>: If node p is connected to node q, and node q is connected to node r, then node p is also connected to node r.</p>
+</li>
+</ul>
+<h3 id="presentation">Presentation</h3>
+<h4 id="logic-level">Logic Level</h4>
+<p><code>Forest</code>. Multiple trees (or Un-Directed Graph)</p>
+<h4 id="code-level">Code Level</h4>
+<p><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf.go#L16" target="_blank">A basic Union Find implementation</a>, which is presenting multiple <code>Connected Component</code> with array.</p>
+<h3 id="optimizations">Optimizations</h3>
+<ol>
+<li>Record the <code>Weight</code> of each node, and balance the sub nodes of each node. O(lgN)</li>
+<li>Compact the <code>Path</code> (from one node to it&apos;s root), since we only care about the root of the tree. O(1)</li>
+</ol>
+<h3 id="problems">Problems</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-connected-components-in-an-undirected-graph/description/" target="_blank">323. Number of Connected Components in an Undirected Graph</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc323.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/surrounded-regions/description/" target="_blank">130. Surrounded Regions</a></td>
+<td style="text-align:left">1. DFS<br> 2. Union-Find</td>
+<td style="text-align:left">2. &#x4E3B;&#x8981;&#x601D;&#x8DEF;&#x662F;&#x9002;&#x65F6;&#x589E;&#x52A0;&#x865A;&#x62DF;&#x8282;&#x70B9;&#xFF0C;&#x60F3;&#x529E;&#x6CD5;&#x8BA9;&#x5143;&#x7D20;&#x5206;&#x95E8;&#x522B;&#x7C7B;&#xFF0C;&#x5EFA;&#x7ACB;&#x52A8;&#x6001;&#x8FDE;&#x901A;&#x5173;&#x7CFB;&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc130.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/satisfiability-of-equality-equations/description/" target="_blank">990. Satisfiability of Equality Equations</a></td>
+<td style="text-align:left">Union-Find</td>
+<td style="text-align:left">&#x6839;&#x636E; == &#x548C; != &#x5206;&#x6210;&#x4E24;&#x90E8;&#x5206;&#xFF0C;&#x5148;&#x5904;&#x7406; == &#x7B97;&#x5F0F;&#xFF0C;&#x4F7F;&#x5F97;&#x4ED6;&#x4EEC;&#x8FDE;&#x901A;&#xFF1B;&#x7136;&#x540E;&#x5904;&#x7406; != &#x7B97;&#x5F0F;&#xFF0C;&#x68C0;&#x67E5;&#x4E0D;&#x7B49;&#x5173;&#x7CFB;&#x662F;&#x5426;&#x7834;&#x574F;&#x76F8;&#x7B49;&#x5173;&#x7CFB;&#x7684;&#x8FDE;&#x901A;&#x6027;&#x3002;</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc990.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/redundant-connection/description/" target="_blank">684. Redundant Connection</a></td>
+<td style="text-align:left">Union-Find</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc684.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/number-of-provinces/description/" target="_blank">547. Number of Provinces</a></td>
+<td style="text-align:left">1. BFS/DFS<br> 2. Union-Find</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc547.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/most-stones-removed-with-same-row-or-column/description/" target="_blank">947. Most Stones Removed with Same Row or Column</a></td>
+<td style="text-align:left">Union-Find</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc947.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---validating-tree-by-graph">Problems - Validating Tree by Graph</h3>
+<ul>
+<li><p>With <code>Un-Directed Graph</code> (261)</p>
+<ul>
+<li>No Ring</li>
+<li>Only ONE <code>Connected Component</code></li>
+</ul>
+</li>
+<li><p>With <code>Directed Graph</code> (1361)</p>
+<ul>
+<li><code>Root</code> node has 0 indegree and all the others have 1 indegree (No ring)</li>
+<li>There is only ONE <code>root</code></li>
+<li>Only ONE <code>Connected Component</code></li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/graph-valid-tree/description/" target="_blank">261. Graph Valid Tree</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Refer to the code</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc261.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/validate-binary-tree-nodes/description/" target="_blank">1361. Validate Binary Tree Nodes</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">Utilize an <code>indegree</code> array. Refer to the code</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc1361.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---other">Problems - Other</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Similar Problems</th>
+<th>Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/accounts-merge/description/" target="_blank">721. Accounts Merge</a></td>
+<td style="text-align:left">bfs, dfs, union-find</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/bfs/bfs_lc721.go" target="_blank">bfs</a> <br> <a href="https://github.com/brofu/leetcode/blob/main/graph/union_find/uf_lc721.go" target="_blank">union-find</a></td>
+<td style="text-align:left"></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td>-</td>
+</tr>
+</tbody>
+</table>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="001-basic-problems.html" class="navigation navigation-prev " aria-label="Previous page: Basic Problems">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="003-Minimum-Spanning-Tree.html" class="navigation navigation-next " aria-label="Next page: Minimum Spanning Tree">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Union Find","level":"1.2.2.2","depth":3,"next":{"title":"Minimum Spanning Tree","level":"1.2.2.3","depth":3,"path":"01-data_structures/300-graph/003-Minimum-Spanning-Tree.md","ref":"01-data_structures/300-graph/003-Minimum-Spanning-Tree.md","articles":[]},"previous":{"title":"Basic Problems","level":"1.2.2.1","depth":3,"path":"01-data_structures/300-graph/001-basic-problems.md","ref":"01-data_structures/300-graph/001-basic-problems.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus","katex"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"01-data_structures/300-graph/002-union-find.md","mtime":"2025-10-18T04:44:44.863Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-18T04:45:31.300Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

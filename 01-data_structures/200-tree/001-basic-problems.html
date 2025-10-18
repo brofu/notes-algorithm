@@ -1,0 +1,1120 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Basic Problems · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="002-complete-tree-problems.html" />
+    
+    
+    <link rel="prev" href="000-principles.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../../">
+            
+                <a href="../../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../readme.html">
+            
+                <a href="../readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="000-principles.html">
+            
+                <a href="000-principles.html">
+            
+                    
+                    Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.2.1.2" data-path="001-basic-problems.html">
+            
+                <a href="001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="002-complete-tree-problems.html">
+            
+                <a href="002-complete-tree-problems.html">
+            
+                    
+                    Complete Tree Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="003-variants-binary-heap.html">
+            
+                <a href="003-variants-binary-heap.html">
+            
+                    
+                    Variants Binary Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="010-other-problems.html">
+            
+                <a href="010-other-problems.html">
+            
+                    
+                    Other Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../300-graph/readme.html">
+            
+                <a href="../300-graph/readme.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../300-graph/001-basic-problems.html">
+            
+                <a href="../300-graph/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../300-graph/002-union-find.html">
+            
+                <a href="../300-graph/002-union-find.html">
+            
+                    
+                    Union Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../300-graph/003-Minimum-Spanning-Tree.html">
+            
+                <a href="../300-graph/003-Minimum-Spanning-Tree.html">
+            
+                    
+                    Minimum Spanning Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../300-graph/004-shortest-path.html">
+            
+                <a href="../300-graph/004-shortest-path.html">
+            
+                    
+                    Shortest Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../000-array.html">
+            
+                <a href="../000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../050-string.html">
+            
+                <a href="../050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../100-list.html">
+            
+                <a href="../100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../400-heap.html">
+            
+                <a href="../400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="../../02-algorithms/readme.html">
+            
+                <a href="../../02-algorithms/readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="../../02-algorithms/00-sorting.html">
+            
+                <a href="../../02-algorithms/00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="../../02-algorithms/27-DFS_and_BFS.html">
+            
+                <a href="../../02-algorithms/27-DFS_and_BFS.html">
+            
+                    
+                    DFS And BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.3" data-path="../../02-algorithms/28-backtrack.html">
+            
+                <a href="../../02-algorithms/28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="../../02-algorithms/32-dynamic_programming.html">
+            
+                <a href="../../02-algorithms/32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="../../02-algorithms/101-parenthese_problems.html">
+            
+                <a href="../../02-algorithms/101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="../../02-algorithms/200-math_problems.html">
+            
+                <a href="../../02-algorithms/200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href="../.." >Basic Problems</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h2 id="tree-basic-problems">Tree Basic Problems</h2>
+<h3 id="problems---traverse">Problems - Traverse</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/invert-binary-tree/description/" target="_blank">226. Invert Binary Tree</a></td>
+<td style="text-align:left">1. Traverse<br>2. Sub Task</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc226.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node/description/" target="_blank">116. Populating Next Right Pointers in Each Node</a></td>
+<td style="text-align:left">1. BFS <br>2. DFS traverse with 3-nary tree</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc116.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/flatten-binary-tree-to-linked-list/description/" target="_blank">114. Flatten Binary Tree to Linked List</a></td>
+<td style="text-align:left">1. Sub Task idea</td>
+<td style="text-align:left">Definition of Recursion function</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc114.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/binary-tree-paths/description/" target="_blank">257. Binary Tree Paths</a></td>
+<td style="text-align:left">Traverse + DFS</td>
+<td style="text-align:left">how to record the trace.</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc257.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/sum-root-to-leaf-numbers/description/" target="_blank">129. Sum Root to Leaf Numbers</a></td>
+<td style="text-align:left">Traverse + DFS</td>
+<td style="text-align:left">Similar with 257</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc129.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/binary-tree-right-side-view/description/" target="_blank">199. Binary Tree Right Side View</a></td>
+<td style="text-align:left">Traverse + BFS or DFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc199.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/description/" target="_blank">662. Maximum Width of Binary Tree</a></td>
+<td style="text-align:left">Traverse + BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc662.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/smallest-string-starting-from-leaf/description/" target="_blank">988. Smallest String Starting From Leaf</a></td>
+<td style="text-align:left">Traverse + DFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc988.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/sum-of-root-to-leaf-binary-numbers/description/" target="_blank">1022. Sum of Root To Leaf Binary Numbers</a></td>
+<td style="text-align:left">Traverse + DFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1022.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/pseudo-palindromic-paths-in-a-binary-tree/description/" target="_blank">1457. Pseudo-Palindromic Paths in a Binary Tree</a></td>
+<td style="text-align:left">Traverse + DFS</td>
+<td style="text-align:left">bit operation to check if a path is pseudo-palindromic. refer to the code</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1457.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---sub-tasks">Problems - Sub Tasks</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/" target="_blank">105. Construct Binary Tree from Preorder and Inorder Traversal</a></td>
+<td style="text-align:left">Sub Task</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc105.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/" target="_blank">106. Construct Binary Tree from Inorder and Postorder Traversal</a></td>
+<td style="text-align:left">Sub Task</td>
+<td style="text-align:left">HashMap to reduce time complexity</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc106.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/" target="_blank">889. Construct Binary Tree from Preorder and Postorder Traversal</a></td>
+<td style="text-align:left">Sub Task</td>
+<td style="text-align:left">1. HashMap to reduce time complexity<br>2. Use slice index</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc889.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/verify-preorder-serialization-of-a-binary-tree/description/" target="_blank">331. Verify Preorder Serialization of a Binary Tree</a></td>
+<td style="text-align:left">1. Sub Task<br>2. Iteration</td>
+<td style="text-align:left">1. With <code>Sub Task</code> approach, we actually construct the tree. And need to check every scenarios if the string is valid.<br>2. With <code>iteration</code>, consider to reduce the space complexity</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc331.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/all-possible-full-binary-trees/description/" target="_blank">894. All Possible Full Binary Trees</a></td>
+<td style="text-align:left">Sub Task</td>
+<td style="text-align:left">How to abstract the <code>Sub Tasks</code> into the <code>left and right child tree</code>? Refer to the code.</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc894.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-binary-tree-ii/description/" target="_blank">998. Maximum Binary Tree II</a></td>
+<td style="text-align:left">Sub Task</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc998.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/delete-nodes-and-return-forest/description/" target="_blank">1110. Delete Nodes And Return Forest</a></td>
+<td style="text-align:left">Sub Task</td>
+<td style="text-align:left">How to make sure a node need to collected?</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1110.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---bfs">Problems - BFS</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/binary-tree-level-order-traversal/description/" target="_blank">102. Binary Tree Level Order Traversal</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc102.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/binary-tree-level-order-traversal-ii/description/" target="_blank">107. Binary Tree Level Order Traversal II</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc107.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/populating-next-right-pointers-in-each-node-ii/description/" target="_blank">117. Populating Next Right Pointers in Each Node II</a></td>
+<td style="text-align:left">1. BFS<br>2. <code>Pointer Apporached</code> for constant extra space. Refer to the code</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc117.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-width-of-binary-tree/description/" target="_blank">662. Maximum Width of Binary Tree</a></td>
+<td style="text-align:left">1. BFS<br>2. DFS</td>
+<td style="text-align:left">Record the node index</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc662.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/find-largest-value-in-each-tree-row/description/" target="_blank">515. Find Largest Value in Each Tree Row</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc515.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/average-of-levels-in-binary-tree/description/" target="_blank">637. Average of Levels in Binary Tree</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc637.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/check-completeness-of-a-binary-tree/description/" target="_blank">958. Check Completeness of a Binary Tree</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left">3 scenarios. Refer to the code</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc958.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-level-sum-of-a-binary-tree/description/" target="_blank">1161. Maximum Level Sum of a Binary Tree</a></td>
+<td style="text-align:left">1. BFS<br>2. DFS</td>
+<td style="text-align:left">With DFS, use list or map? Refer to the code</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1161.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/deepest-leaves-sum/description/" target="_blank">1302. Deepest Leaves Sum</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1302.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/even-odd-tree/description/" target="_blank">1609. Even Odd Tree</a></td>
+<td style="text-align:left">BFS</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1609.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---construction">Problems - Construction</h3>
+<blockquote>
+<p>&#x4E8C;&#x53C9;&#x6811;&#x7684;&#x6784;&#x9020;&#x95EE;&#x9898;&#x4E00;&#x822C;&#x90FD;&#x662F;&#x4F7F;&#x7528;&#x300C;&#x5206;&#x89E3;&#x95EE;&#x9898;&#x300D;&#x7684;&#x601D;&#x8DEF;&#xFF1A;&#x6784;&#x9020;&#x6574;&#x68F5;&#x6811; = &#x6839;&#x8282;&#x70B9; + &#x6784;&#x9020;&#x5DE6;&#x5B50;&#x6811; + &#x6784;&#x9020;&#x53F3;&#x5B50;&#x6811;&#x3002;</p>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/maximum-binary-tree/description/" target="_blank">654. Maximum Binary Tree</a></td>
+<td style="text-align:left">1. Sub Task</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc654.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/" target="_blank">105. Construct Binary Tree from Preorder and Inorder Traversal</a></td>
+<td style="text-align:left">1. Sub Task</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc105.go" target="_blank">code</a></td>
+<td style="text-align:left">Complexity analyze</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/construct-binary-tree-from-inorder-and-postorder-traversal/description/" target="_blank">106. Construct Binary Tree from Inorder and Postorder Traversal</a></td>
+<td style="text-align:left">1. Sub Task</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc106.go" target="_blank">code</a></td>
+<td style="text-align:left">Similar Complexity as 105</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-postorder-traversal/description/" target="_blank">889. Construct Binary Tree from Preorder and Postorder Traversal</a></td>
+<td style="text-align:left">1. Sub Task</td>
+<td style="text-align:left">Check if current node only has 1 child</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc889.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Complexity Analyse</strong></p>
+<ul>
+<li><a href="https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/description/" target="_blank">105. Construct Binary Tree from Preorder and Inorder Traversal</a> </li>
+</ul>
+<p>Pay attention to the <code>left-skewed tree</code> and <code>right-skewed tree</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Tree Shape</th>
+<th style="text-align:left">Recursive Calls</th>
+<th style="text-align:left"><code>for</code> Loop Work per Call</th>
+<th style="text-align:left">Total Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><strong>Right-Skewed Tree</strong></td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">O(1)</td>
+<td style="text-align:left"><strong>O(n)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Left-Skewed Tree</strong></td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left"><strong>O(n&#xB2;)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Balanced Tree</strong></td>
+<td style="text-align:left">O(log n)</td>
+<td style="text-align:left">O(n) per level</td>
+<td style="text-align:left"><strong>O(n log n)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Optimized (Hash Map Lookup) Right-Skewed</strong></td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">O(1)</td>
+<td style="text-align:left"><strong>O(n)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Optimized (Hash Map Lookup) Left-Skewed</strong></td>
+<td style="text-align:left">O(n)</td>
+<td style="text-align:left">O(1)</td>
+<td style="text-align:left"><strong>O(n)</strong></td>
+</tr>
+<tr>
+<td style="text-align:left"><strong>Optimized (Hash Map Lookup) Balanced</strong></td>
+<td style="text-align:left">O(log n)</td>
+<td style="text-align:left">O(1)</td>
+<td style="text-align:left"><strong>O(n)</strong></td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---serialization">Problems - Serialization</h3>
+<blockquote>
+<p>&#x4EC0;&#x4E48;&#x6837;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x7684;&#x6570;&#x636E;&#x53EF;&#x4EE5;&#x53CD;&#x5E8F;&#x5217;&#x5316;&#x51FA;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#xFF1F;</p>
+<p>&#x5F53;&#x4E8C;&#x53C9;&#x6811;&#x4E2D;&#x8282;&#x70B9;&#x7684;&#x503C;&#x4E0D;&#x5B58;&#x5728;&#x91CD;&#x590D;&#x65F6;&#xFF1A;</p>
+<p>&#x5982;&#x679C;&#x5E8F;&#x5217;&#x5316;&#x7ED3;&#x679C;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x7A7A;&#x6307;&#x9488;&#xFF0C;&#x53EA;&#x7ED9;&#x51FA;&#x4E00;&#x79CD;&#x904D;&#x5386;&#x987A;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x65E0;&#x6CD5;&#x8FD8;&#x539F;&#x51FA;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+<p>&#x5982;&#x679C;&#x5E8F;&#x5217;&#x5316;&#x7ED3;&#x679C;&#x4E2D;&#x4E0D;&#x5305;&#x542B;&#x7A7A;&#x6307;&#x9488;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E14;&#x7ED9;&#x51FA;&#x4E24;&#x79CD;&#x904D;&#x5386;&#x987A;&#x5E8F;&#xFF0C;&#x5206;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ul>
+<li><p>&#x5982;&#x679C;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x524D;&#x5E8F;&#x548C;&#x4E2D;&#x5E8F;&#xFF0C;&#x6216;&#x8005;&#x540E;&#x5E8F;&#x548C;&#x4E2D;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x8FD8;&#x539F;&#x51FA;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x7ED9;&#x51FA;&#x524D;&#x5E8F;&#x548C;&#x540E;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x65E0;&#x6CD5;&#x8FD8;&#x539F;&#x51FA;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+</li>
+</ul>
+<p>&#x5982;&#x679C;&#x4F60;&#x7684;&#x5E8F;&#x5217;&#x5316;&#x7ED3;&#x679C;&#x4E2D;&#x5305;&#x542B;&#x7A7A;&#x6307;&#x9488;&#x7684;&#x4FE1;&#x606F;&#xFF0C;&#x4E14;&#x53EA;&#x7ED9;&#x51FA;&#x4E00;&#x79CD;&#x904D;&#x5386;&#x987A;&#x5E8F;&#xFF0C;&#x4E5F;&#x8981;&#x5206;&#x4E24;&#x79CD;&#x60C5;&#x51B5;&#xFF1A;</p>
+<ul>
+<li><p>&#x5982;&#x679C;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x524D;&#x5E8F;&#x6216;&#x8005;&#x540E;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x53EF;&#x4EE5;&#x8FD8;&#x539F;&#x51FA;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+</li>
+<li><p>&#x5982;&#x679C;&#x7ED9;&#x51FA;&#x7684;&#x662F;&#x4E2D;&#x5E8F;&#xFF0C;&#x90A3;&#x4E48;&#x65E0;&#x6CD5;&#x8FD8;&#x539F;&#x51FA;&#x552F;&#x4E00;&#x7684;&#x4E00;&#x68F5;&#x4E8C;&#x53C9;&#x6811;&#x3002;</p>
+</li>
+</ul>
+</blockquote>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/serialize-and-deserialize-binary-tree/description/" target="_blank">297. Serialize and Deserialize Binary Tree</a></td>
+<td style="text-align:left">1. Sub Task<br>2. BFS</td>
+<td style="text-align:left">1. The return value of traverse function<br>2. Same approach to deserialize</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc297.go" target="_blank">code</a></td>
+<td style="text-align:left">O(N)</td>
+</tr>
+<tr>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---ancestor-problems">Problems - Ancestor Problems</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Complexity</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree/description/" target="_blank">236. Lowest Common Ancestor of a Binary Tree</a></td>
+<td style="text-align:left">1. post-order DFS<br>2. Track the path from root to target node and compare the slice</td>
+<td style="text-align:left">1. Only 2 situations: one left, on right and one is parent of another <br> 2. The loop order of the track slice</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc236.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iv/description/" target="_blank">1676. Lowest Common Ancestor of a Binary Tree IV</a></td>
+<td style="text-align:left">Same as 236</td>
+<td style="text-align:left">Note: these 2 questions require the node MUST in the tree</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1676.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-ii/description/" target="_blank">1644. Lowest Common Ancestor of a Binary Tree II</a></td>
+<td style="text-align:left">Sub Task.</td>
+<td style="text-align:left">Note: p,q NOT necessary int the tree. So, need to make sure EACH node is traversed to check if it exists. So, put logic <code>root.Value == p.Value or root.Value == q.Value</code> to the <code>post-order</code> location</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1644.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-search-tree/description/" target="_blank">235. Lowest Common Ancestor of a Binary Search Tree</a></td>
+<td style="text-align:left">1.Sub task.<br>2. Iteration</td>
+<td style="text-align:left">1. Utilize the character of BST</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc235.go" target="_blank">code</a></td>
+<td style="text-align:left">1. O(N), O(N)<br>2. O(N), O(1)</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/lowest-common-ancestor-of-a-binary-tree-iii/description/" target="_blank">1650. Lowest Common Ancestor of a Binary Tree III</a></td>
+<td style="text-align:left">Linked list</td>
+<td style="text-align:left">1. Check the public node 2 linked list</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1650.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/smallest-common-region/description/" target="_blank">1257. Smallest Common Region</a></td>
+<td style="text-align:left">Same solutions as 1650</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1257.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<h3 id="problems---bst-problems">Problems - BST Problems</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/convert-sorted-array-to-binary-search-tree/description/" target="_blank">108. Convert Sorted Array to Binary Search Tree</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc108.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/balance-a-binary-search-tree/description/" target="_blank">1382. Balance a Binary Search Tree</a></td>
+<td style="text-align:left">in-order traverse + convert ordered array to BST</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc1382.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/binary-tree-vertical-order-traversal/description/" target="_blank">314. Binary Tree Vertical Order Traversal</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc314.go" target="_blank">code</a></td>
+</tr>
+</tbody>
+</table>
+<h3 id="bst-problems---construction">BST Problems - Construction</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/unique-binary-search-trees/description/" target="_blank">96. Unique Binary Search Trees</a></td>
+<td style="text-align:left">DFS post-order</td>
+<td style="text-align:left">How to set memo effectively</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc96.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/unique-binary-search-trees-ii/description/" target="_blank">95. Unique Binary Search Trees II</a></td>
+<td style="text-align:left">DFS post-order</td>
+<td style="text-align:left">Edged case of <code>low &gt; high</code> and <code>low == high</code></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/tree/tree_lc95.go" target="_blank">code</a></td>
+</tr>
+</tbody>
+</table>
+<p>Reference</p>
+<ol>
+<li><a href="https://labuladong.online/algo/data-structure/bst-part3/" target="_blank">https://labuladong.online/algo/data-structure/bst-part3/</a></li>
+</ol>
+<ul>
+<li>LC116. Populating Next Right Pointers in Each Node<ul>
+<li>Why the normal <code>traverse</code> approach doesn&apos;t work with this problem? O(N), O(1)</li>
+<li>Util BFS <code>traverse</code>. O(N), O(N)</li>
+<li>LC117. Populating Next Right Pointers in Each Node II<ul>
+<li>BFS approach. O(N), O(N)</li>
+<li>BFS approach with cursive. O(N), O(N)</li>
+<li>Multiple pointers approach &amp; sentinel. O(N), O(Cons). And the approach also work with LC116.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>LC114. Flatten Binary Tree to Linked List<ul>
+<li>Traverse the tree, construct the link.</li>
+<li>Flat recursively</li>
+</ul>
+</li>
+</ul>
+<p><strong><em>Construction</em></strong></p>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="000-principles.html" class="navigation navigation-prev " aria-label="Previous page: Principles">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="002-complete-tree-problems.html" class="navigation navigation-next " aria-label="Next page: Complete Tree Problems">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Basic Problems","level":"1.2.1.2","depth":3,"next":{"title":"Complete Tree Problems","level":"1.2.1.3","depth":3,"path":"01-data_structures/200-tree/002-complete-tree-problems.md","ref":"01-data_structures/200-tree/002-complete-tree-problems.md","articles":[]},"previous":{"title":"Principles","level":"1.2.1.1","depth":3,"path":"01-data_structures/200-tree/000-principles.md","ref":"01-data_structures/200-tree/000-principles.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus","katex"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"01-data_structures/200-tree/001-basic-problems.md","mtime":"2025-10-18T04:44:44.862Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-18T04:45:31.300Z"},"basePath":"../..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../../gitbook/gitbook.js"></script>
+    <script src="../../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+

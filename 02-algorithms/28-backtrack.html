@@ -1,0 +1,1027 @@
+
+<!DOCTYPE HTML>
+<html lang="" >
+    <head>
+        <meta charset="UTF-8">
+        <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+        <title>Backtrack · Brofu's Talk</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="description" content="">
+        <meta name="generator" content="GitBook 3.2.3">
+        
+        
+        
+    
+    <link rel="stylesheet" href="../gitbook/style.css">
+
+    
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-disqus/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                
+            
+        
+
+    
+
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+        
+    
+
+        
+    
+    
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="../gitbook/images/apple-touch-icon-precomposed-152.png">
+    <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
+
+    
+    <link rel="next" href="32-dynamic_programming.html" />
+    
+    
+    <link rel="prev" href="27-DFS_and_BFS.html" />
+    
+
+    </head>
+    <body>
+        
+<div class="book">
+    <div class="book-summary">
+        
+            
+<div id="book-search-input" role="search">
+    <input type="text" placeholder="Type to search" />
+</div>
+
+            
+                <nav role="navigation">
+                
+
+
+<ul class="summary">
+    
+    
+
+    
+
+    
+        
+        
+    
+        <li class="chapter " data-level="1.1" data-path="../">
+            
+                <a href="../">
+            
+                    
+                    Introduction
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2" data-path="../01-data_structures/readme.html">
+            
+                <a href="../01-data_structures/readme.html">
+            
+                    
+                    Data Structures
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1" data-path="../01-data_structures/200-tree/readme.html">
+            
+                <a href="../01-data_structures/200-tree/readme.html">
+            
+                    
+                    Tree
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.1.1" data-path="../01-data_structures/200-tree/000-principles.html">
+            
+                <a href="../01-data_structures/200-tree/000-principles.html">
+            
+                    
+                    Principles
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.2" data-path="../01-data_structures/200-tree/001-basic-problems.html">
+            
+                <a href="../01-data_structures/200-tree/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.3" data-path="../01-data_structures/200-tree/002-complete-tree-problems.html">
+            
+                <a href="../01-data_structures/200-tree/002-complete-tree-problems.html">
+            
+                    
+                    Complete Tree Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.4" data-path="../01-data_structures/200-tree/003-variants-binary-heap.html">
+            
+                <a href="../01-data_structures/200-tree/003-variants-binary-heap.html">
+            
+                    
+                    Variants Binary Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.1.5" data-path="../01-data_structures/200-tree/010-other-problems.html">
+            
+                <a href="../01-data_structures/200-tree/010-other-problems.html">
+            
+                    
+                    Other Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2" data-path="../01-data_structures/300-graph/readme.html">
+            
+                <a href="../01-data_structures/300-graph/readme.html">
+            
+                    
+                    Graph
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.2.2.1" data-path="../01-data_structures/300-graph/001-basic-problems.html">
+            
+                <a href="../01-data_structures/300-graph/001-basic-problems.html">
+            
+                    
+                    Basic Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.2" data-path="../01-data_structures/300-graph/002-union-find.html">
+            
+                <a href="../01-data_structures/300-graph/002-union-find.html">
+            
+                    
+                    Union Find
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.3" data-path="../01-data_structures/300-graph/003-Minimum-Spanning-Tree.html">
+            
+                <a href="../01-data_structures/300-graph/003-Minimum-Spanning-Tree.html">
+            
+                    
+                    Minimum Spanning Tree
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.2.4" data-path="../01-data_structures/300-graph/004-shortest-path.html">
+            
+                <a href="../01-data_structures/300-graph/004-shortest-path.html">
+            
+                    
+                    Shortest Path
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.3" data-path="../01-data_structures/000-array.html">
+            
+                <a href="../01-data_structures/000-array.html">
+            
+                    
+                    Array
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.4" data-path="../01-data_structures/050-string.html">
+            
+                <a href="../01-data_structures/050-string.html">
+            
+                    
+                    String
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.5" data-path="../01-data_structures/100-list.html">
+            
+                <a href="../01-data_structures/100-list.html">
+            
+                    
+                    List
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.2.6" data-path="../01-data_structures/400-heap.html">
+            
+                <a href="../01-data_structures/400-heap.html">
+            
+                    
+                    Heap
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3" data-path="readme.html">
+            
+                <a href="readme.html">
+            
+                    
+                    Algorithms
+            
+                </a>
+            
+
+            
+            <ul class="articles">
+                
+    
+        <li class="chapter " data-level="1.3.1" data-path="00-sorting.html">
+            
+                <a href="00-sorting.html">
+            
+                    
+                    Sorting
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.2" data-path="27-DFS_and_BFS.html">
+            
+                <a href="27-DFS_and_BFS.html">
+            
+                    
+                    DFS And BFS
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter active" data-level="1.3.3" data-path="28-backtrack.html">
+            
+                <a href="28-backtrack.html">
+            
+                    
+                    Backtrack
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.4" data-path="32-dynamic_programming.html">
+            
+                <a href="32-dynamic_programming.html">
+            
+                    
+                    Dynamic Programming
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.5" data-path="101-parenthese_problems.html">
+            
+                <a href="101-parenthese_problems.html">
+            
+                    
+                    Parenthese Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+        <li class="chapter " data-level="1.3.6" data-path="200-math_problems.html">
+            
+                <a href="200-math_problems.html">
+            
+                    
+                    Math Problems
+            
+                </a>
+            
+
+            
+        </li>
+    
+
+            </ul>
+            
+        </li>
+    
+
+    
+
+    <li class="divider"></li>
+
+    <li>
+        <a href="https://www.gitbook.com" target="blank" class="gitbook-link">
+            Published with GitBook
+        </a>
+    </li>
+</ul>
+
+
+                </nav>
+            
+        
+    </div>
+
+    <div class="book-body">
+        
+            <div class="body-inner">
+                
+                    
+
+<div class="book-header" role="navigation">
+    
+
+    <!-- Title -->
+    <h1>
+        <i class="fa fa-circle-o-notch fa-spin"></i>
+        <a href=".." >Backtrack</a>
+    </h1>
+</div>
+
+
+
+
+                    <div class="page-wrapper" tabindex="-1" role="main">
+                        <div class="page-inner">
+                            
+<div id="book-search-results">
+    <div class="search-noresults">
+    
+                                <section class="normal markdown-section">
+                                
+                                <h1 id="backtrack">Backtrack</h1>
+<h2 id="thinking-patterns">Thinking Patterns</h2>
+<blockquote>
+<p>&#x62BD;&#x8C61;&#x5730;&#x8BF4;&#xFF0C;&#x89E3;&#x51B3;&#x4E00;&#x4E2A;&#x56DE;&#x6EAF;&#x95EE;&#x9898;&#xFF0C;&#x5B9E;&#x9645;&#x4E0A;&#x5C31;&#x662F;&#x904D;&#x5386;&#x4E00;&#x68F5;&#x51B3;&#x7B56;&#x6811;&#x7684;&#x8FC7;&#x7A0B;&#xFF0C;&#x6811;&#x7684;&#x6BCF;&#x4E2A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x5B58;&#x653E;&#x7740;&#x4E00;&#x4E2A;&#x5408;&#x6CD5;&#x7B54;&#x6848;&#x3002;&#x628A;&#x6574;&#x68F5;&#x6811;&#x904D;&#x5386;&#x4E00;&#x904D;&#xFF0C;&#x628A;&#x53F6;&#x5B50;&#x8282;&#x70B9;&#x4E0A;&#x7684;&#x7B54;&#x6848;&#x90FD;&#x6536;&#x96C6;&#x8D77;&#x6765;&#xFF0C;&#x5C31;&#x80FD;&#x5F97;&#x5230;&#x6240;&#x6709;&#x7684;&#x5408;&#x6CD5;&#x7B54;&#x6848;&#x3002;</p>
+<p>&#x7AD9;&#x5728;&#x56DE;&#x6EAF;&#x6811;&#x7684;&#x4E00;&#x4E2A;&#x8282;&#x70B9;&#x4E0A;&#xFF0C;&#x53EA;&#x9700;&#x8981;&#x601D;&#x8003;3&#x4E2A;&#x95EE;&#x9898;&#xFF1A;</p>
+<ol>
+<li><p>&#x8DEF;&#x5F84;. &#x4E5F;&#x5C31;&#x662F;&#x5DF2;&#x7ECF;&#x505A;&#x51FA;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+</li>
+<li><p>&#x62E9;&#x5217;&#x8868;. &#x4E5F;&#x5C31;&#x662F;&#x5F53;&#x524D;&#x53EF;&#x4EE5;&#x505A;&#x7684;&#x9009;&#x62E9;&#x3002;</p>
+</li>
+<li><p>&#x7ED3;&#x675F;&#x6761;&#x4EF6;. &#x4E5F;&#x5C31;&#x662F;&#x5230;&#x8FBE;&#x51B3;&#x7B56;&#x6811;&#x5E95;&#x5C42;&#xFF0C;&#x65E0;&#x6CD5;&#x518D;&#x505A;&#x9009;&#x62E9;&#x7684;&#x6761;&#x4EF6;&#x3002;</p>
+</li>
+</ol>
+</blockquote>
+<h2 id="code-template">Code Template</h2>
+<pre><code>result = []
+
+def backtrack(path, choices_list):
+    if can_finish:
+        result.add(path)
+        return
+
+    for choice in choinces_list:
+        choose a choice // usually need to update the `path`
+        backtrack(path, new_choice_list)
+        cancel the choice // revert the updating to `path`
+</code></pre><h2 id="problems">Problems</h2>
+<h3 id="problems---permutation-combination-and-set-problems">Problems - Permutation, Combination and Set Problems</h3>
+<p>Generally, there are 3 types of classic problems for <code>Permutation</code>, <code>Combination</code> and <code>Set</code> problems. There maybe some other variants from these 3 types.</p>
+<pre><code>1. Choose from a list which contains `Non-Duplicate` elements, and element can ONLY be used for ONE time.
+2. Choose from a list which contains `Duplicate` elements, and element can ONLY be used for ONE times.
+3. Choose from a list which contains `Non-Duplicate` elements, and element can be used for MULTIPLE times.
+</code></pre><p><strong>Thinking Patterns</strong></p>
+<p>And the key points of these problems is the <code>backtrack tree</code></p>
+<p><strong>Problems</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Permutation Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/permutations/description/" target="_blank">46</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="backtrack_lc46.go">code</a></td>
+<td style="text-align:left">type 1</td>
+</tr>
+<tr>
+<td style="text-align:left">Permutation Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/permutations-ii/description/" target="_blank">47</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="backtrack_lc47.go">code</a></td>
+<td style="text-align:left">type 2</td>
+</tr>
+<tr>
+<td style="text-align:left">Combination Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/combinations/description/" target="_blank">77</a></td>
+<td style="text-align:left">Same as 78</td>
+<td style="text-align:left"><a href="backtrack_lc77.go">code</a></td>
+<td style="text-align:left">type 1</td>
+</tr>
+<tr>
+<td style="text-align:left">Combination Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/combination-sum-iii/description/" target="_blank">216</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="backtrack_lc216.go">code</a></td>
+<td style="text-align:left">type 1</td>
+</tr>
+<tr>
+<td style="text-align:left">Combination Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/combination-sum-ii/description/" target="_blank">40</a></td>
+<td style="text-align:left">Prune. Refer to the code.</td>
+<td style="text-align:left"><a href="backtrack_lc40.go">code</a></td>
+<td style="text-align:left">type 2</td>
+</tr>
+<tr>
+<td style="text-align:left">Combination Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/combination-sum/description/" target="_blank">39</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="backtrack_lc39.go">code</a></td>
+<td style="text-align:left">type 3</td>
+</tr>
+<tr>
+<td style="text-align:left">Set Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/subsets/description/" target="_blank">78. Subsets</a></td>
+<td style="text-align:left">1. How to control the flow <br> 2. Complexity analyse</td>
+<td style="text-align:left"><a href="backtrack_lc78.go">code</a></td>
+<td style="text-align:left">type 1</td>
+</tr>
+<tr>
+<td style="text-align:left">Set Problems</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/subsets-ii/description/" target="_blank">90</a></td>
+<td style="text-align:left">1. How to prune. Refer to code</td>
+<td style="text-align:left"><a href="backtrack_lc90.go">code</a></td>
+<td style="text-align:left">type 2</td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<ul>
+<li><p>About <code>Set Problems</code>. </p>
+<ul>
+<li>How to abstract the 3 core questions about the backtrack framework</li>
+</ul>
+</li>
+<li><p>Time Complexity and Space Complexity</p>
+<ul>
+<li><p>78 Subsets</p>
+<ul>
+<li>Time Complexity<ul>
+<li>There are total <code>2^n</code> of subsets</li>
+<li>For each set, we need to copy <code>k</code> number, if there is <code>k</code> numbers in this subset</li>
+<li>So, the overall complexity is <code>SUM(k*C(n, k))</code>. <code>k</code> is the number of elements in the subsets, and <code>C(n, k)</code> is the number of subsets with <code>k</code> numbers in it</li>
+<li><code>SUM(k * C(n,k)) = n * 2^(n-1)</code>. So, overall is <code>O(n*2^n)</code></li>
+</ul>
+</li>
+<li>Space <ul>
+<li>The backtrack is around O(n)</li>
+<li>The output is same as time complexity</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>77 Combinations</p>
+<ul>
+<li>Time Complexity<ul>
+<li><code>O(k*C(n, k))</code>, <code>k</code> is the number of elements in the subset, and <code>C(n, k)</code> is number of subsets with k numbers in each of them</li>
+<li>Space Complexity</li>
+<li>The backtrack is around O(k)</li>
+<li>The output also <code>O(k*C(n,k))</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>40 Combinations II  </p>
+<ul>
+<li>Time Complexity<ul>
+<li>Without pruning, roughly about <code>O(n*2^n)</code>. <ul>
+<li>The worst case is to check all the nodes in the recursive tree, that&apos;s <code>O(2^n)</code></li>
+<li>And need to copy the right answers, which up to O(n) </li>
+<li>So overall, it&apos;s around O(n*2^n)</li>
+</ul>
+</li>
+<li>But with pruning, the time complexity reduce efficiently. </li>
+</ul>
+</li>
+<li>Space Complexity<ul>
+<li>For the backtrack stack space, the worst case would be O(n). If the <code>target == n</code>, and all the numbers in candidates are 1 </li>
+<li>For the output, if there is <code>r</code> results, the worst case would be O(r*n)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>39 Combination Sum</p>
+<ul>
+<li>Time Complexity<ul>
+<li>Recursive call times around O(2^T), T is the <code>target</code></li>
+<li>Copy cost of validate result, O(T).</li>
+<li>Overall is O(T*2^T). </li>
+</ul>
+</li>
+<li>Space Complexity<ul>
+<li>Recursive stack, O(T). If all <code>1</code>.</li>
+<li>Result storage. O(T*R), R is valid number of results</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>46 Permutations</p>
+<ul>
+<li>Time Complexity<ul>
+<li>Recursive call times:
+Count ALL the nodes of the recursive tree:
+  1 + n + n<em>(n-1) + n</em>(n-1)<em>(n-2) + ... + n!
+  = sum(n!/(n-k)!) where k = 0, 1, ... n,
+  = sum(n!/d!) where d = n-k
+  = n! </em> sum(1/d!) where d = 0, 1, ... n, &lt; n! <em> e
+  so, we have O(e</em>n!)</li>
+<li>Copy time cost: O(n)</li>
+<li>Overall: O(n*n!)</li>
+</ul>
+</li>
+<li>Space complexity<ul>
+<li>Recursive call stack: O(n)</li>
+<li><code>visted</code> array: O(n)</li>
+<li>Result storage: O(n*n!)</li>
+<li>Overall: O(n*n!)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>47 Permutations II<ul>
+<li>Time Complexity<ul>
+<li>Recursive call times: ==&gt; Wrong<ul>
+<li>if there are k repeated elements, with pruning:</li>
+<li>then we have 1 + (n-k) + (n-k)(n-k-1) + ... + (n-k)!</li>
+<li>totally we have e*(n-k)! times of recursive call</li>
+</ul>
+</li>
+<li>Recursive call times: ==&gt; Right<ul>
+<li>let <code>m</code> as the number of distinct elements</li>
+<li><code>Ki</code> as the repeat times of the <code>ith</code> number in <code>m</code></li>
+<li>then, the <code>leaf nodes</code> are <code>n!/(k1!*K2!*...*Km!)</code></li>
+</ul>
+</li>
+<li>Copy time cost O(n)</li>
+<li>Sort (if we use sort): <code>O(n*lgn)</code></li>
+<li>Overall <code>O(n*n!/(K1!*K2!*...*Km!))</code></li>
+</ul>
+</li>
+<li>Space Complexity<ul>
+<li>Recursive stack <code>O(n)</code></li>
+<li><code>visited</code> array <code>O(n)</code></li>
+<li><code>hitMap</code> (if we use map) <code>n + (n-1) + (n-2) + ... + 1 = O(n^2)</code></li>
+<li>Result store: <code>O(n*R)</code>, R is the result, R &lt; n!</li>
+<li>R = <code>n!/(K1!*K2!*...*Km!)</code></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>Type 2 Subset &amp; Combinations pruning. 90, 40</p>
+<ul>
+<li>Check via recursive tree</li>
+<li><code>sort</code> and <code>nums[i] == nums[i-1]</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="problems---permutation-combination-and-set-problems---variants">Problems - Permutation, Combination and Set Problems - Variants</h3>
+<p><strong>Problems</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/" target="_blank">967. Numbers With Same Consecutive Differences</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="backtrack_lc967.go">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/numbers-with-same-consecutive-differences/description/" target="_blank">491. Non-decreasing Subsequences</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc491.go" target="_blank">code</a></td>
+<td style="text-align:left">Combination Problem type II</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/unique-paths-iii/description/" target="_blank">980. Unique Paths III</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">DFS with backtrack</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/dfs/dfs_lc980.go" target="_blank">code</a></td>
+<td style="text-align:left">Permutation actually</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/palindrome-partitioning/description/" target="_blank">131. Palindrome Partitioning</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">backtrack</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc131.go" target="_blank">code</a></td>
+<td style="text-align:left">Combination/Set problems</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/restore-ip-addresses/description/" target="_blank">93. Restore IP Addresses</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">backtrack</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc93.go" target="_blank">code</a></td>
+<td style="text-align:left">Combination/Set problems</td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/letter-combinations-of-a-phone-number/description/" target="_blank">17. Letter Combinations of a Phone Number</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">backtrack</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc17.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li><p>Complexity</p>
+<ul>
+<li><p>980</p>
+<ul>
+<li>O(E!) E is the number of walkable cells. Why not O(m*n)? </li>
+<li>O(m*n) </li>
+</ul>
+</li>
+<li><p>131</p>
+<ul>
+<li>TC 3 solutions<ul>
+<li>O(2^n*n^2) </li>
+<li>O(2^n*n) + O(n^3)</li>
+<li>O(2^n*n) + O(n^2)</li>
+</ul>
+</li>
+<li>SC       <ul>
+<li>O(2^n*n) + O(n)</li>
+</ul>
+</li>
+<li>Refer to the code </li>
+</ul>
+</li>
+<li><p>93</p>
+<ul>
+<li>TC<ul>
+<li>O(C(n-1, 3)*n). C(n-1, 3) would be roughly 3^4, witch pruning.</li>
+</ul>
+</li>
+<li>SC<ul>
+<li>O(C(n-1, 3)*n)</li>
+</ul>
+</li>
+</ul>
+</li>
+<li><p>17</p>
+<ul>
+<li>TC<ul>
+<li>O(3^n*n)</li>
+</ul>
+</li>
+<li>SC<ul>
+<li>O(3^n*n)</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="problems---variants-problems">Problems - Variants Problems</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Types</th>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left">Debt Problem</td>
+<td style="text-align:left"><a href="https://leetcode.com/problems/optimal-account-balancing/description/" target="_blank">465</a></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="backtrack_lc465.go">code</a></td>
+</tr>
+</tbody>
+</table>
+<p><strong>References</strong></p>
+<ol>
+<li><a href="https://labuladong.online/algo/essential-technique/backtrack-framework/" target="_blank">https://labuladong.online/algo/essential-technique/backtrack-framework/</a> </li>
+<li><a href="https://labuladong.online/algo/essential-technique/permutation-combination-subset-all-in-one/" target="_blank">https://labuladong.online/algo/essential-technique/permutation-combination-subset-all-in-one/</a></li>
+<li><a href="https://labuladong.online/algo/practice-in-action/two-views-of-backtrack/" target="_blank">https://labuladong.online/algo/practice-in-action/two-views-of-backtrack/</a></li>
+</ol>
+<h3 id="problems---others">Problems - Others</h3>
+<p><strong>Problems</strong></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:left">Problems</th>
+<th style="text-align:left">Possible Solutions</th>
+<th style="text-align:left">Key Points</th>
+<th style="text-align:left">Code</th>
+<th style="text-align:left">Comments</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/target-sum/description/" target="_blank">494. Target Sum</a></td>
+<td style="text-align:left">1. Backtrack <br> 2. DP</td>
+<td style="text-align:left">1. Pruning with memo</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc494.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/sudoku-solver/description/" target="_blank">37. Sudoku Solver</a></td>
+<td style="text-align:left">backtrack</td>
+<td style="text-align:left">How to control the flow? Refer to the code</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc37.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/n-queens/description/" target="_blank">51. N-Queens</a></td>
+<td style="text-align:left">backtrack</td>
+<td style="text-align:left">How to control the flow? N-Queen v.s. Sudoku Problem</td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc51.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"><a href="https://leetcode.com/problems/n-queens-ii/description/" target="_blank">52. N-Queens II</a></td>
+<td style="text-align:left">backtrack</td>
+<td style="text-align:left"></td>
+<td style="text-align:left"><a href="https://github.com/brofu/leetcode/blob/main/backtrack/backtrack_lc52.go" target="_blank">code</a></td>
+<td style="text-align:left"></td>
+</tr>
+<tr>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left"></td>
+<td style="text-align:left">-</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Notes</strong></p>
+<ol>
+<li>More about the <strong>N-Queen</strong> problems<ul>
+<li>Time Complexity<ul>
+<li>O(N^N) ==&gt; O(N!) with O(1) prune algorithm</li>
+<li><code>cols</code>, <code>diag1</code> and <code>diag2</code></li>
+</ul>
+</li>
+<li>Space Complexity <ul>
+<li>O(N^2) if store the location data with <code>board</code> (n * n matrix)</li>
+<li>O(N) with <code>cols</code>, <code>diag1</code>, and <code>diag2</code></li>
+</ul>
+</li>
+<li>How does <code>cols</code>, <code>diag1</code>, <code>diag2</code> work?<ul>
+<li>&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x7684;&#x7279;&#x70B9;&#xFF1A;&#x6240;&#x6709;&#x5728;&#x540C;&#x4E00;&#x4E3B;&#x5BF9;&#x89D2;&#x7EBF;&#x4E0A;&#x7684;&#x683C;&#x5B50;&#x90FD;&#x6EE1;&#x8DB3;&#xFF1A; <code>row &#x2212; col = &#x5E38;&#x6570;</code>  </li>
+<li>&#x4F46; row - col &#x7684;&#x8303;&#x56F4;&#x662F;&#x4ECE; &#x2212; &#x1D441; + 1 &#x5230; &#x1D441; &#x2212; 1 &#x4E0D;&#x80FD;&#x76F4;&#x63A5;&#x4F5C;&#x4E3A;&#x6570;&#x7EC4;&#x4E0B;&#x6807; </li>
+<li>&#x6240;&#x4EE5;&#x6211;&#x4EEC;&#x7EDF;&#x4E00;&#x52A0;&#x4E0A;&#x504F;&#x79FB; &#x1D441; &#x2212; 1 &#x628A;&#x8303;&#x56F4;&#x6620;&#x5C04;&#x5230; [0, 2N-2]</li>
+</ul>
+</li>
+</ul>
+</li>
+</ol>
+<p><strong>References</strong></p>
+<ol>
+<li><a href="https://labuladong.online/algo/dynamic-programming/target-sum/" target="_blank">https://labuladong.online/algo/dynamic-programming/target-sum/</a></li>
+</ol>
+
+                                
+                                </section>
+                            
+    </div>
+    <div class="search-results">
+        <div class="has-results">
+            
+            <h1 class="search-results-title"><span class='search-results-count'></span> results matching "<span class='search-query'></span>"</h1>
+            <ul class="search-results-list"></ul>
+            
+        </div>
+        <div class="no-results">
+            
+            <h1 class="search-results-title">No results matching "<span class='search-query'></span>"</h1>
+            
+        </div>
+    </div>
+</div>
+
+                        </div>
+                    </div>
+                
+            </div>
+
+            
+                
+                <a href="27-DFS_and_BFS.html" class="navigation navigation-prev " aria-label="Previous page: DFS And BFS">
+                    <i class="fa fa-angle-left"></i>
+                </a>
+                
+                
+                <a href="32-dynamic_programming.html" class="navigation navigation-next " aria-label="Next page: Dynamic Programming">
+                    <i class="fa fa-angle-right"></i>
+                </a>
+                
+            
+        
+    </div>
+
+    <script>
+        var gitbook = gitbook || [];
+        gitbook.push(function() {
+            gitbook.page.hasChanged({"page":{"title":"Backtrack","level":"1.3.3","depth":2,"next":{"title":"Dynamic Programming","level":"1.3.4","depth":2,"path":"02-algorithms/32-dynamic_programming.md","ref":"02-algorithms/32-dynamic_programming.md","articles":[]},"previous":{"title":"DFS And BFS","level":"1.3.2","depth":2,"path":"02-algorithms/27-DFS_and_BFS.md","ref":"02-algorithms/27-DFS_and_BFS.md","articles":[]},"dir":"ltr"},"config":{"plugins":["plantuml-cloud","disqus","katex"],"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"pluginsConfig":{"disqus":{"useIdentifier":false,"shortName":"brofu-tech"},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"plantuml-cloud":{"umlPath":"images/uml","protocol":"http","type":"plantuml-server","host":"www.plantuml.com","port":"80","path":"/plantuml/svg"},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css","website":"styles/website.css"},"showLevel":false}},"theme":"default","pdf":{"pageNumbers":true,"fontSize":12,"fontFamily":"Arial","paperSize":"a4","chapterMark":"pagebreak","pageBreaksBefore":"/","margin":{"right":62,"left":62,"top":56,"bottom":56}},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"sortedBy":"-","variables":{},"title":"Brofu's Talk","gitbook":"*","unchanged":["MySQL","ClickHouse","ElasticSearch"]},"file":{"path":"02-algorithms/28-backtrack.md","mtime":"2025-10-18T04:44:44.864Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2025-10-18T04:45:31.300Z"},"basePath":"..","book":{"language":""}});
+        });
+    </script>
+</div>
+
+        
+    <script src="../gitbook/gitbook.js"></script>
+    <script src="../gitbook/theme.js"></script>
+    
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/URI.js/1.16.1/URI.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-disqus/plugin.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-sharing/buttons.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+
+    </body>
+</html>
+
